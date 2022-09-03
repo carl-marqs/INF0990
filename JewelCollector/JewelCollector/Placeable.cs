@@ -9,6 +9,10 @@ abstract class Placeable
     internal readonly Tuple<byte, byte> _position;
     #endregion Fields
 
+    #region Properties
+    internal abstract string Symbol { get; }
+    #endregion Properties
+
     #region Constructor
     /// <summary>
     /// Construtor padrão da classe.

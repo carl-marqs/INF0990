@@ -22,6 +22,10 @@ internal class Robot : Placeable
     private readonly ushort[] _bag = new ushort[Enum.GetNames(typeof(Jewel.Types)).Length];
     #endregion Fields
 
+    #region Properties
+    internal override string Symbol { get => "ME"; }
+    #endregion Properties
+
     #region Constructor
     /// <summary>
     /// Construtor padrão da classe.

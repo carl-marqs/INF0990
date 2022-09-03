@@ -20,6 +20,18 @@ internal class Obstacle : Placeable
     private readonly Types _type;
     #endregion Fields
 
+    #region Properties
+    internal override string Symbol
+    {
+        get => _type switch
+            {
+                Types.Tree  => "$$",
+                Types.Water => "##",
+                _           => "??"
+            };
+    }
+    #endregion Properties
+
     #region Constructor
     /// <summary>
     /// Construtor padrão da classe.

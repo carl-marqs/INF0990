@@ -22,6 +22,16 @@ internal class Jewel : Placeable
     #endregion Fields
 
     #region Properties
+    internal override string Symbol
+    {
+        get => _type switch
+            {
+                Types.Red   => "JR",
+                Types.Green => "JG",
+                Types.Blue  => "JB",
+                _           => "J?"
+            };
+    }
     internal uint Value
     {
         get => _type switch
