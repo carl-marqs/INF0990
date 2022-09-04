@@ -6,8 +6,8 @@ namespace JewelCollector;
 internal struct Position
 {
     #region Fields
-    internal byte x;
-    internal byte y;
+    internal readonly byte x;
+    internal readonly byte y;
     #endregion Fields
 
     #region Constructor

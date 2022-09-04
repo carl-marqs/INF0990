@@ -44,7 +44,7 @@ internal class Map
             }
         }
 
-        _logger.LogWarning("There are no jewels adjacent to {Position}", position);
+        LogHelper.QueueLog(_logger, LogEntry.Types.Warning, $"There are no jewels adjacent to {position}");
         return null;
     }
 
@@ -67,13 +67,13 @@ internal class Map
                     moveable.Move(nextPosition);
                 }
                 else
-                    _logger.LogWarning("Blocked position: {Position}", nextPosition);
+                    LogHelper.QueueLog(_logger, LogEntry.Types.Warning, $"Blocked position: {nextPosition}");
             }
             else
-                _logger.LogWarning("Invalid position: {Position}", nextPosition);
+                LogHelper.QueueLog(_logger, LogEntry.Types.Warning, $"Invalid position: {nextPosition}");
         }
         else
-            _logger.LogWarning("{Name} is not moveable.", placeable.GetType());
+            LogHelper.QueueLog(_logger, LogEntry.Types.Warning, $"{placeable.GetType()} is not moveable.");
     }
 
     /// <summary>
@@ -85,10 +85,10 @@ internal class Map
         if (_map[placeable.Position.y, placeable.Position.x] == null)
         {
             _map[placeable.Position.y, placeable.Position.x] = placeable;
-            _logger.LogDebug("Added {Name} to {Position}", placeable.GetType(), placeable.Position);
+            LogHelper.QueueLog(_logger, LogEntry.Types.Debug, $"Added {placeable.GetType()} to {placeable.Position}");
         }
         else
-            _logger.LogWarning("Position {Position} already occupied.", placeable.Position);
+            LogHelper.QueueLog(_logger, LogEntry.Types.Warning, $"Position {placeable.Position} already occupied");
     }
 
     /// <summary>

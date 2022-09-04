@@ -35,7 +35,7 @@ internal class Robot : Placeable, IMoveable
     internal void CollectJewel(Jewel.Types type)
     {
         _bag[(int)type] += 1;
-        _logger.LogInformation("Jewel collected");
+        LogHelper.QueueLog(_logger, LogEntry.Types.Information, "Jewel collected");
     }
 
     /// <summary>
@@ -45,7 +45,7 @@ internal class Robot : Placeable, IMoveable
     public void Move(Position newPosition)
     {
         Position = newPosition;
-        _logger.LogDebug("Moved to {Position}", Position);
+        LogHelper.QueueLog(_logger, LogEntry.Types.Debug, $"Moved to {Position}");
     }
 
     /// <summary>

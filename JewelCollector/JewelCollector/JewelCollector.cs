@@ -69,10 +69,11 @@ public class JewelCollector
             // Loop de execução
             do
             {
-                // Exibir mapa e bolsa
+                // Exibir mapa, bolsa e logs
                 Console.Clear();
                 map.Print();
                 player.PrintBag();
+                LogHelper.ConsumeLogs();
 
                 // Ler o comando inserido pelo usuário
                 Console.Write("Enter the command: ");
@@ -115,14 +116,14 @@ public class JewelCollector
 
                     // Caso não seja nenhum dos definidos acima, o comando é inválido
                     default:
-                        s_logger.LogWarning(new InvalidOperationException(), "Unknown command: {Command}", command);
+                        LogHelper.QueueLog(s_logger, LogEntry.Types.Warning, $"Unknown command: {command}", new InvalidOperationException());
                         break;
                 }
             } while (isRunning);
         }
         catch (Exception ex)
         {
-            s_logger.LogCritical(ex, "Unhandled exception");
+            LogHelper.QueueLog(s_logger, LogEntry.Types.Error, "Unhandled exception", ex);
         }
     }
 }
