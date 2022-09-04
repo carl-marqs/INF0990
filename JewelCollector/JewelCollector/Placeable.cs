@@ -3,13 +3,10 @@ namespace JewelCollector;
 /// <summary>
 /// Representa objetos que podem ser colocados no mapa.
 /// </summary>
-abstract class Placeable
+internal abstract class Placeable
 {
-    #region Fields
-    internal readonly Tuple<byte, byte> _position;
-    #endregion Fields
-
     #region Properties
+    internal Position Position { get; set; }
     internal abstract string Symbol { get; }
     #endregion Properties
 
@@ -18,9 +15,9 @@ abstract class Placeable
     /// Construtor padrão da classe.
     /// </summary>
     /// <param name="position"> Posição no mapa. </param>
-    internal Placeable(Tuple<byte, byte> position)
+    internal Placeable(byte y, byte x)
     {
-        _position = position;
+        Position = new Position(y, x);
     }
     #endregion Constructor
 }

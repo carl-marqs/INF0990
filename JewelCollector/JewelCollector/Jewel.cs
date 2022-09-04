@@ -18,30 +18,22 @@ internal class Jewel : Placeable
     #endregion
 
     #region Fields
-    private readonly Types _type;
+
     #endregion Fields
 
     #region Properties
     internal override string Symbol
     {
-        get => _type switch
-            {
-                Types.Red   => "JR",
-                Types.Green => "JG",
-                Types.Blue  => "JB",
-                _           => "J?"
-            };
+        get => Type switch
+        {
+            Types.Red => "JR",
+            Types.Green => "JG",
+            Types.Blue => "JB",
+            _ => "J?"
+        };
     }
-    internal uint Value
-    {
-        get => _type switch
-            {
-                Types.Red   => 100,
-                Types.Green => 50,
-                Types.Blue  => 10,
-                _           => 0
-            };
-    }
+
+    internal Types Type { get; }
     #endregion Properties
 
     #region Constructor
@@ -50,9 +42,22 @@ internal class Jewel : Placeable
     /// </summary>
     /// <param name="position"> Posição no mapa. </param>
     /// <param name="type"> Tipo de joia. </param>
-    internal Jewel(Tuple<byte, byte> position, Types type) : base(position)
+    internal Jewel(byte y, byte x, Types type) : base(y, x)
     {
-        _type = type;
+        Type = type;
     }
     #endregion Constructor
+
+    #region Visible Methods
+    internal static byte GetValue(Types type)
+    {
+        return type switch
+        {
+            Types.Red => 100,
+            Types.Green => 50,
+            Types.Blue => 10,
+            _ => 0
+        };
+    }
+    #endregion Visible Methods
 }

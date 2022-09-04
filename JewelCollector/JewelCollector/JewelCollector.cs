@@ -39,41 +39,73 @@ public class JewelCollector
     public static void Main()
     {
         bool isRunning = true;
+        Map map;
+        Robot player;
 
         try
         {
+            // Inicializar objetos
+            map = new Map(s_loggerFactory.CreateLogger<Map>(), 10, 10);
+            map.Place(new Jewel(1, 9, Jewel.Types.Red));
+            map.Place(new Jewel(8, 8, Jewel.Types.Red));
+            map.Place(new Jewel(9, 1, Jewel.Types.Green));
+            map.Place(new Jewel(7, 6, Jewel.Types.Green));
+            map.Place(new Jewel(3, 4, Jewel.Types.Blue));
+            map.Place(new Jewel(2, 1, Jewel.Types.Blue));
+            map.Place(new Obstacle(5, 0, Obstacle.Types.Water));
+            map.Place(new Obstacle(5, 1, Obstacle.Types.Water));
+            map.Place(new Obstacle(5, 2, Obstacle.Types.Water));
+            map.Place(new Obstacle(5, 3, Obstacle.Types.Water));
+            map.Place(new Obstacle(5, 4, Obstacle.Types.Water));
+            map.Place(new Obstacle(5, 5, Obstacle.Types.Water));
+            map.Place(new Obstacle(5, 6, Obstacle.Types.Water));
+            map.Place(new Obstacle(3, 9, Obstacle.Types.Tree));
+            map.Place(new Obstacle(8, 3, Obstacle.Types.Tree));
+            map.Place(new Obstacle(2, 5, Obstacle.Types.Tree));
+            map.Place(new Obstacle(1, 4, Obstacle.Types.Tree));
+            player = new Robot(s_loggerFactory.CreateLogger<Robot>(), 0, 0);
+            map.Place(player);
+
             // Loop de execução
             do
             {
+                // Exibir mapa e bolsa
+                Console.Clear();
+                map.Print();
+                player.PrintBag();
+
                 // Ler o comando inserido pelo usuário
-                Console.WriteLine("Enter the command: ");
+                Console.Write("Enter the command: ");
                 string? command = Console.ReadLine();
 
-                // Checar se o comando é válido
-                if (string.IsNullOrWhiteSpace(command))
-                    throw new InvalidOperationException("Null or whitespace command.");
-                
                 // Escolher o que fazer com o comando inserido
                 switch (command)
                 {
-                    // Descolar para o norte
+                    // Deslocar para o norte
                     case "w":
+                        map.Move(player, IMoveable.MoveDirections.North);
                         break;
 
-                    // Descolcar para o oeste
+                    // Deslocar para o oeste
                     case "a":
+                        map.Move(player, IMoveable.MoveDirections.West);
                         break;
 
                     // Deslocar para o sul
                     case "s":
+                        map.Move(player, IMoveable.MoveDirections.South);
                         break;
 
                     // Deslocar para o leste
                     case "d":
+                        map.Move(player, IMoveable.MoveDirections.East);
                         break;
 
                     // Pegar uma joia
                     case "g":
+                        Jewel? jewel = map.GetAdjacentJewel(player.Position);
+                        if (jewel != null)
+                            player.CollectJewel(jewel.Type);
                         break;
 
                     // Encerrar o jogo
@@ -83,7 +115,8 @@ public class JewelCollector
 
                     // Caso não seja nenhum dos definidos acima, o comando é inválido
                     default:
-                        throw new InvalidOperationException($"Unknown command: {command}");
+                        s_logger.LogWarning(new InvalidOperationException(), "Unknown command: {Command}", command);
+                        break;
                 }
             } while (isRunning);
         }

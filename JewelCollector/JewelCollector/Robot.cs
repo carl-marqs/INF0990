@@ -1,24 +1,15 @@
+using System.Collections.ObjectModel;
+using Microsoft.Extensions.Logging;
+
 namespace JewelCollector;
 
 /// <summary>
 /// Representa o personagem controlado pelo jogador.
 /// </summary>
-internal class Robot : Placeable
+internal class Robot : Placeable, IMoveable
 {
-    #region Enums
-    /// <summary>
-    /// Possíveis direções que o robô pode se mover.
-    /// </summary>
-    internal enum MoveDirections
-    {
-        North, /// Norte
-        West,  /// Oeste
-        South, /// Sul
-        East   /// Leste
-    }
-    #endregion Enums
-
     #region Fields
+    private readonly ILogger<Robot> _logger;
     private readonly ushort[] _bag = new ushort[Enum.GetNames(typeof(Jewel.Types)).Length];
     #endregion Fields
 
@@ -31,8 +22,9 @@ internal class Robot : Placeable
     /// Construtor padrão da classe.
     /// </summary>
     /// <param name="position"> Posição inicial no mapa. </param>
-    internal Robot(Tuple<byte, byte> position)  : base(position)
+    internal Robot(ILogger<Robot> logger, byte y, byte x) : base(y, x)
     {
+        _logger = logger;
     }
     #endregion Constructor
 
@@ -40,28 +32,37 @@ internal class Robot : Placeable
     /// <summary>
     /// 
     /// </summary>
-    /// <param name="direction"></param>
-    internal void Move(MoveDirections direction)
+    internal void CollectJewel(Jewel.Types type)
     {
+        _bag[(int)type] += 1;
+        _logger.LogInformation("Jewel collected");
+    }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="direction"></param>
+    public void Move(Position newPosition)
+    {
+        Position = newPosition;
+        _logger.LogDebug("Moved to {Position}", Position);
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    internal void PrintBag()
+    {
+        uint totalItems = 0;
+        ushort totalValue = 0;
+
+        foreach (Jewel.Types type in Enum.GetValues(typeof(Jewel.Types)).Cast<Jewel.Types>())
+        {
+            totalItems += _bag[(int)type];
+            totalValue += (ushort)(_bag[(int)type] * Jewel.GetValue(type));
+        }
+
+        Console.WriteLine($"Bag total items: {totalItems} | Bag total value: {totalValue}");
     }
     #endregion Visible Methods
-
-    #region Private Methods
-    /// <summary>
-    /// 
-    /// </summary>
-    private void CollectJewel()
-    {
-
-    }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    private void PrintBag()
-    {
-        
-    }
-    #endregion Private Methods
 }

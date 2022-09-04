@@ -24,11 +24,11 @@ internal class Obstacle : Placeable
     internal override string Symbol
     {
         get => _type switch
-            {
-                Types.Tree  => "$$",
-                Types.Water => "##",
-                _           => "??"
-            };
+        {
+            Types.Tree => "$$",
+            Types.Water => "##",
+            _ => "??"
+        };
     }
     #endregion Properties
 
@@ -38,7 +38,7 @@ internal class Obstacle : Placeable
     /// </summary>
     /// <param name="position"> Posição no mapa. </param>
     /// <param name="type"> Tipo de obstáculo. </param>
-    internal Obstacle(Tuple<byte, byte> position, Types type) : base(position)
+    internal Obstacle(byte y, byte x, Types type) : base(y, x)
     {
         _type = type;
     }
