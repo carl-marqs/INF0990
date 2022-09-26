@@ -1,0 +1,86 @@
+\hypertarget{classJewelCollector_1_1LogHelper}{}\doxysection{Jewel\+Collector.\+Log\+Helper}
+\label{classJewelCollector_1_1LogHelper}\index{JewelCollector.LogHelper@{JewelCollector.LogHelper}}
+
+
+Classe que armazena entradas de log numa fila para exibi-\/las todas de uma vez.   
+
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classJewelCollector_1_1LogHelper_ab882adec52df7177a90382f8dc6f172c}{Queue\+Log}} (ILogger logger, \mbox{\hyperlink{structJewelCollector_1_1LogEntry_a2c2b4c14336985c2b5fff2555081427d}{Log\+Entry.\+Types}} log\+Type, string message, Exception? exception=null)
+\begin{DoxyCompactList}\small\item\em Adiciona uma entrada de log na fila.  \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classJewelCollector_1_1LogHelper_a95736eae8998eb21cb830fab8e3b0616}{Consume\+Logs}} ()
+\begin{DoxyCompactList}\small\item\em Escreve todos os logs pendentes.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly Queue$<$ \mbox{\hyperlink{structJewelCollector_1_1LogEntry}{Log\+Entry}} $>$ \mbox{\hyperlink{classJewelCollector_1_1LogHelper_aa70badb75399fad9e962a999ef78f44b}{\+\_\+queue}} = new()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe que armazena entradas de log numa fila para exibi-\/las todas de uma vez.  
+
+Definition at line \mbox{\hyperlink{LogHelper_8cs_source_l00010}{10}} of file \mbox{\hyperlink{LogHelper_8cs_source}{Log\+Helper.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classJewelCollector_1_1LogHelper_a95736eae8998eb21cb830fab8e3b0616}\label{classJewelCollector_1_1LogHelper_a95736eae8998eb21cb830fab8e3b0616}} 
+\index{JewelCollector.LogHelper@{JewelCollector.LogHelper}!ConsumeLogs@{ConsumeLogs}}
+\index{ConsumeLogs@{ConsumeLogs}!JewelCollector.LogHelper@{JewelCollector.LogHelper}}
+\doxysubsubsection{\texorpdfstring{ConsumeLogs()}{ConsumeLogs()}}
+{\footnotesize\ttfamily static void Jewel\+Collector.\+Log\+Helper.\+Consume\+Logs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Escreve todos os logs pendentes.  
+
+
+
+Definition at line \mbox{\hyperlink{LogHelper_8cs_source_l00032}{32}} of file \mbox{\hyperlink{LogHelper_8cs_source}{Log\+Helper.\+cs}}.
+
+\mbox{\Hypertarget{classJewelCollector_1_1LogHelper_ab882adec52df7177a90382f8dc6f172c}\label{classJewelCollector_1_1LogHelper_ab882adec52df7177a90382f8dc6f172c}} 
+\index{JewelCollector.LogHelper@{JewelCollector.LogHelper}!QueueLog@{QueueLog}}
+\index{QueueLog@{QueueLog}!JewelCollector.LogHelper@{JewelCollector.LogHelper}}
+\doxysubsubsection{\texorpdfstring{QueueLog()}{QueueLog()}}
+{\footnotesize\ttfamily static void Jewel\+Collector.\+Log\+Helper.\+Queue\+Log (\begin{DoxyParamCaption}\item[{ILogger}]{logger,  }\item[{\mbox{\hyperlink{structJewelCollector_1_1LogEntry_a2c2b4c14336985c2b5fff2555081427d}{Log\+Entry.\+Types}}}]{log\+Type,  }\item[{string}]{message,  }\item[{Exception?}]{exception = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Adiciona uma entrada de log na fila.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em logger} & Objeto responsável por registrar mensagens. \\
+\hline
+{\em log\+Type} & Nível (ou tipo) do log. \\
+\hline
+{\em message} & Mensagem do log. \\
+\hline
+{\em exception} & Exceção associada. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{LogHelper_8cs_source_l00024}{24}} of file \mbox{\hyperlink{LogHelper_8cs_source}{Log\+Helper.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classJewelCollector_1_1LogHelper_aa70badb75399fad9e962a999ef78f44b}\label{classJewelCollector_1_1LogHelper_aa70badb75399fad9e962a999ef78f44b}} 
+\index{JewelCollector.LogHelper@{JewelCollector.LogHelper}!\_queue@{\_queue}}
+\index{\_queue@{\_queue}!JewelCollector.LogHelper@{JewelCollector.LogHelper}}
+\doxysubsubsection{\texorpdfstring{\_queue}{\_queue}}
+{\footnotesize\ttfamily readonly Queue$<$\mbox{\hyperlink{structJewelCollector_1_1LogEntry}{Log\+Entry}}$>$ Jewel\+Collector.\+Log\+Helper.\+\_\+queue = new()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{LogHelper_8cs_source_l00013}{13}} of file \mbox{\hyperlink{LogHelper_8cs_source}{Log\+Helper.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Jewel\+Collector/\+Jewel\+Collector/\mbox{\hyperlink{LogHelper_8cs}{Log\+Helper.\+cs}}\end{DoxyCompactItemize}

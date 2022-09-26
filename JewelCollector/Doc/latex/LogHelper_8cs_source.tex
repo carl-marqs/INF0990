@@ -1,0 +1,58 @@
+\hypertarget{LogHelper_8cs_source}{}\doxysection{Log\+Helper.\+cs}
+\label{LogHelper_8cs_source}\index{JewelCollector/JewelCollector/LogHelper.cs@{JewelCollector/JewelCollector/LogHelper.cs}}
+\mbox{\hyperlink{LogHelper_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00001}00001 \textcolor{keyword}{using }Microsoft.Extensions.Logging;}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceJewelCollector}{JewelCollector}};}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00005}00005 \textcolor{preprocessor}{\#pragma warning disable CA2254}}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00010}\mbox{\hyperlink{classJewelCollector_1_1LogHelper}{00010}} \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keyword}{class }\mbox{\hyperlink{classJewelCollector_1_1LogHelper}{LogHelper}}}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00011}00011 \{}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00012}00012 \textcolor{preprocessor}{    \#region Fields}}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00013}\mbox{\hyperlink{classJewelCollector_1_1LogHelper_aa70badb75399fad9e962a999ef78f44b}{00013}}     \textcolor{keyword}{private} \textcolor{keyword}{static} readonly Queue<LogEntry> \mbox{\hyperlink{classJewelCollector_1_1LogHelper_aa70badb75399fad9e962a999ef78f44b}{\_queue}} = \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00014}00014 \textcolor{preprocessor}{    \#endregion Fields}}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00016}00016 \textcolor{preprocessor}{    \#region Visible Methods}}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00024}\mbox{\hyperlink{classJewelCollector_1_1LogHelper_ab882adec52df7177a90382f8dc6f172c}{00024}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classJewelCollector_1_1LogHelper_ab882adec52df7177a90382f8dc6f172c}{QueueLog}}(ILogger logger, \mbox{\hyperlink{structJewelCollector_1_1LogEntry}{LogEntry}}.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_a2c2b4c14336985c2b5fff2555081427d}{Types}} logType, \textcolor{keywordtype}{string} message, Exception? exception = \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00025}00025     \{}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00026}00026         \mbox{\hyperlink{classJewelCollector_1_1LogHelper_aa70badb75399fad9e962a999ef78f44b}{\_queue}}.Enqueue(\textcolor{keyword}{new} \mbox{\hyperlink{structJewelCollector_1_1LogEntry}{LogEntry}}(logger, logType, message, exception));}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00027}00027     \}}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00032}\mbox{\hyperlink{classJewelCollector_1_1LogHelper_a95736eae8998eb21cb830fab8e3b0616}{00032}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classJewelCollector_1_1LogHelper_a95736eae8998eb21cb830fab8e3b0616}{ConsumeLogs}}()}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00033}00033     \{}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00034}00034         \textcolor{keywordflow}{while} (\mbox{\hyperlink{classJewelCollector_1_1LogHelper_aa70badb75399fad9e962a999ef78f44b}{\_queue}}.Count > 0)}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00035}00035         \{}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00036}00036             \mbox{\hyperlink{structJewelCollector_1_1LogEntry}{LogEntry}} entry = \mbox{\hyperlink{classJewelCollector_1_1LogHelper_aa70badb75399fad9e962a999ef78f44b}{\_queue}}.Dequeue();}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00038}00038             \textcolor{keywordflow}{switch} (entry.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_a74c5f7dbf2fd8a7913faa613e24a6765}{type}})}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00039}00039             \{}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00040}00040                 \textcolor{keywordflow}{case} \mbox{\hyperlink{structJewelCollector_1_1LogEntry}{LogEntry}}.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_a2c2b4c14336985c2b5fff2555081427d}{Types}}.Debug:}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00041}00041                     entry.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_ad82cb81f726d8b3204b7b0f0c1dbc0dd}{logger}}.LogDebug(entry.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_ab353c44edb27a0acfe5ab8e35620dab6}{message}});}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00042}00042                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00044}00044                 \textcolor{keywordflow}{case} \mbox{\hyperlink{structJewelCollector_1_1LogEntry}{LogEntry}}.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_a2c2b4c14336985c2b5fff2555081427d}{Types}}.Information:}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00045}00045                     entry.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_ad82cb81f726d8b3204b7b0f0c1dbc0dd}{logger}}.LogInformation(entry.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_ab353c44edb27a0acfe5ab8e35620dab6}{message}});}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00046}00046                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00048}00048                 \textcolor{keywordflow}{case} \mbox{\hyperlink{structJewelCollector_1_1LogEntry}{LogEntry}}.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_a2c2b4c14336985c2b5fff2555081427d}{Types}}.Warning:}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00049}00049                     \textcolor{keywordflow}{if} (entry.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_a726d5ab93cc17ea4b0badf8d5cfe1023}{exception}} != \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00050}00050                         entry.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_ad82cb81f726d8b3204b7b0f0c1dbc0dd}{logger}}.LogWarning(entry.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_a726d5ab93cc17ea4b0badf8d5cfe1023}{exception}}, entry.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_ab353c44edb27a0acfe5ab8e35620dab6}{message}});}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00051}00051                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00052}00052                         entry.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_ad82cb81f726d8b3204b7b0f0c1dbc0dd}{logger}}.LogWarning(entry.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_ab353c44edb27a0acfe5ab8e35620dab6}{message}});}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00053}00053                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00055}00055                 \textcolor{keywordflow}{case} \mbox{\hyperlink{structJewelCollector_1_1LogEntry}{LogEntry}}.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_a2c2b4c14336985c2b5fff2555081427d}{Types}}.Error:}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00056}00056                     \textcolor{keywordflow}{if} (entry.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_a726d5ab93cc17ea4b0badf8d5cfe1023}{exception}} != \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00057}00057                         entry.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_ad82cb81f726d8b3204b7b0f0c1dbc0dd}{logger}}.LogError(entry.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_a726d5ab93cc17ea4b0badf8d5cfe1023}{exception}}, entry.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_ab353c44edb27a0acfe5ab8e35620dab6}{message}});}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00058}00058                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00059}00059                         entry.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_ad82cb81f726d8b3204b7b0f0c1dbc0dd}{logger}}.LogError(entry.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_ab353c44edb27a0acfe5ab8e35620dab6}{message}});}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00060}00060                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00061}00061             \}}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00062}00062         \}}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00063}00063     \}}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00064}00064 \textcolor{preprocessor}{    \#endregion Visible Methods}}
+\DoxyCodeLine{\Hypertarget{LogHelper_8cs_source_l00065}00065 \}}
+
+\end{DoxyCode}

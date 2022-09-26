@@ -1,0 +1,302 @@
+\hypertarget{classJewelCollector_1_1Map}{}\doxysection{Jewel\+Collector.\+Map}
+\label{classJewelCollector_1_1Map}\index{JewelCollector.Map@{JewelCollector.Map}}
+
+
+Representa o mapa 2D do jogo.   
+
+
+\doxysubsection*{Package Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJewelCollector_1_1Map_ab3333f7554ed101f7c37e1feede438f5}{Map}} (ILogger$<$ \mbox{\hyperlink{classJewelCollector_1_1Map}{Map}} $>$ logger, byte size)
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe.  \end{DoxyCompactList}\item 
+ushort \mbox{\hyperlink{classJewelCollector_1_1Map_af08fba6577219e7748274736dab84a82}{Count\+Jewels}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o número de joias no mapa.  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJewelCollector_1_1Placeable}{Placeable}}? \mbox{\hyperlink{classJewelCollector_1_1Map_a91956fb1237d2581cbdab7a333ff5a21}{Get\+Adjacent\+Item}} (\mbox{\hyperlink{structJewelCollector_1_1Position}{Position}} position)
+\begin{DoxyCompactList}\small\item\em Obtém um item adjacente a uma dada posição, se houver.  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structJewelCollector_1_1Position}{Position}} \mbox{\hyperlink{classJewelCollector_1_1Map_a8606ecf1cef81fab62b3b35e0b641117}{Get\+Empty\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Obtém uma posição no mapa que não é ocupada por nenhum item.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJewelCollector_1_1Map_a5dfc5ea5c3dc7758241fd5237f8a8ead}{Move}} (\mbox{\hyperlink{classJewelCollector_1_1Placeable}{Placeable}} placeable, \mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable_aec5fc5a66f11a9c24ab60d0be09bebab}{IMoveable.\+Move\+Directions}} direction)
+\begin{DoxyCompactList}\small\item\em Move um item para determinada posição.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJewelCollector_1_1Map_a733b37eddf009baac08f13f7dc36a900}{Place}} (\mbox{\hyperlink{classJewelCollector_1_1Placeable}{Placeable}} placeable)
+\begin{DoxyCompactList}\small\item\em Coloca um item em sua posição inicial.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJewelCollector_1_1Map_a1853e9f567638fff9b7c17377837b1f1}{Print}} ()
+\begin{DoxyCompactList}\small\item\em Exibe o mapa.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classJewelCollector_1_1Map_a39b34b6436ae2457a3fe1e0a186ea3d9}{Is\+Position\+Blocked}} (\mbox{\hyperlink{structJewelCollector_1_1Position}{Position}}? position)
+\begin{DoxyCompactList}\small\item\em Verifica se determinada posição está sendo ocupada por outro item intransponível.  \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJewelCollector_1_1Map_ab93e9d7c66eed3ec9917458a99e143f0}{Is\+Adjacent\+To\+Radioactive}} (\mbox{\hyperlink{structJewelCollector_1_1Position}{Position}}? position)
+\begin{DoxyCompactList}\small\item\em Verifica se há um elemento radioativo em uma posição adjacente  \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classJewelCollector_1_1Map_a75a79e5960e17a41608b0faf0be1870e}{Is\+Position\+Valid}} (\mbox{\hyperlink{structJewelCollector_1_1Position}{Position}}? position)
+\begin{DoxyCompactList}\small\item\em Verifica se uma posição está dentro dos limites do mapa.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structJewelCollector_1_1Position}{Position}} \mbox{\hyperlink{classJewelCollector_1_1Map_a346dec5779baa9301218228894a7f650}{Get\+Next\+Position}} (\mbox{\hyperlink{structJewelCollector_1_1Position}{Position}} old\+Position, \mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable_aec5fc5a66f11a9c24ab60d0be09bebab}{IMoveable.\+Move\+Directions}} direction)
+\begin{DoxyCompactList}\small\item\em Obtém a próxima posição, dada uma posição inicial e a direção a se mover.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly ILogger$<$ \mbox{\hyperlink{classJewelCollector_1_1Map}{Map}} $>$ \mbox{\hyperlink{classJewelCollector_1_1Map_a377c879f548033635965c1eb6a78a595}{\+\_\+logger}}
+\item 
+readonly? \mbox{\hyperlink{classJewelCollector_1_1Placeable}{Placeable}}\mbox{[},\mbox{]} \mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\+\_\+map}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa o mapa 2D do jogo.  
+
+Definition at line \mbox{\hyperlink{Map_8cs_source_l00008}{8}} of file \mbox{\hyperlink{Map_8cs_source}{Map.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classJewelCollector_1_1Map_ab3333f7554ed101f7c37e1feede438f5}\label{classJewelCollector_1_1Map_ab3333f7554ed101f7c37e1feede438f5}} 
+\index{JewelCollector.Map@{JewelCollector.Map}!Map@{Map}}
+\index{Map@{Map}!JewelCollector.Map@{JewelCollector.Map}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}}
+{\footnotesize\ttfamily Jewel\+Collector.\+Map.\+Map (\begin{DoxyParamCaption}\item[{ILogger$<$ \mbox{\hyperlink{classJewelCollector_1_1Map}{Map}} $>$}]{logger,  }\item[{byte}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Construtor padrão da classe.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em logger} & Objeto responsável por registrar mensagens. \\
+\hline
+{\em size} & Tamanho do mapa. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Map_8cs_source_l00021}{21}} of file \mbox{\hyperlink{Map_8cs_source}{Map.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classJewelCollector_1_1Map_af08fba6577219e7748274736dab84a82}\label{classJewelCollector_1_1Map_af08fba6577219e7748274736dab84a82}} 
+\index{JewelCollector.Map@{JewelCollector.Map}!CountJewels@{CountJewels}}
+\index{CountJewels@{CountJewels}!JewelCollector.Map@{JewelCollector.Map}}
+\doxysubsubsection{\texorpdfstring{CountJewels()}{CountJewels()}}
+{\footnotesize\ttfamily ushort Jewel\+Collector.\+Map.\+Count\+Jewels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Obtém o número de joias no mapa.  
+
+\begin{DoxyReturn}{Returns}
+Quantidade de joias no mapa. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Map_8cs_source_l00033}{33}} of file \mbox{\hyperlink{Map_8cs_source}{Map.\+cs}}.
+
+\mbox{\Hypertarget{classJewelCollector_1_1Map_a91956fb1237d2581cbdab7a333ff5a21}\label{classJewelCollector_1_1Map_a91956fb1237d2581cbdab7a333ff5a21}} 
+\index{JewelCollector.Map@{JewelCollector.Map}!GetAdjacentItem@{GetAdjacentItem}}
+\index{GetAdjacentItem@{GetAdjacentItem}!JewelCollector.Map@{JewelCollector.Map}}
+\doxysubsubsection{\texorpdfstring{GetAdjacentItem()}{GetAdjacentItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJewelCollector_1_1Placeable}{Placeable}}? Jewel\+Collector.\+Map.\+Get\+Adjacent\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structJewelCollector_1_1Position}{Position}}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Obtém um item adjacente a uma dada posição, se houver.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Posição a se verificar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Item adjacente, se houver, null caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Map_8cs_source_l00048}{48}} of file \mbox{\hyperlink{Map_8cs_source}{Map.\+cs}}.
+
+\mbox{\Hypertarget{classJewelCollector_1_1Map_a8606ecf1cef81fab62b3b35e0b641117}\label{classJewelCollector_1_1Map_a8606ecf1cef81fab62b3b35e0b641117}} 
+\index{JewelCollector.Map@{JewelCollector.Map}!GetEmptyPosition@{GetEmptyPosition}}
+\index{GetEmptyPosition@{GetEmptyPosition}!JewelCollector.Map@{JewelCollector.Map}}
+\doxysubsubsection{\texorpdfstring{GetEmptyPosition()}{GetEmptyPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structJewelCollector_1_1Position}{Position}} Jewel\+Collector.\+Map.\+Get\+Empty\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Obtém uma posição no mapa que não é ocupada por nenhum item.  
+
+\begin{DoxyReturn}{Returns}
+Posição vazia. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Map_8cs_source_l00077}{77}} of file \mbox{\hyperlink{Map_8cs_source}{Map.\+cs}}.
+
+\mbox{\Hypertarget{classJewelCollector_1_1Map_a346dec5779baa9301218228894a7f650}\label{classJewelCollector_1_1Map_a346dec5779baa9301218228894a7f650}} 
+\index{JewelCollector.Map@{JewelCollector.Map}!GetNextPosition@{GetNextPosition}}
+\index{GetNextPosition@{GetNextPosition}!JewelCollector.Map@{JewelCollector.Map}}
+\doxysubsubsection{\texorpdfstring{GetNextPosition()}{GetNextPosition()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structJewelCollector_1_1Position}{Position}} Jewel\+Collector.\+Map.\+Get\+Next\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structJewelCollector_1_1Position}{Position}}}]{old\+Position,  }\item[{\mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable_aec5fc5a66f11a9c24ab60d0be09bebab}{IMoveable.\+Move\+Directions}}}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Obtém a próxima posição, dada uma posição inicial e a direção a se mover.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em old\+Position} & Posição inicial. \\
+\hline
+{\em direction} & Direção a se mover. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Próxima posição, caso a direção seja válida, posição inicial caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Map_8cs_source_l00192}{192}} of file \mbox{\hyperlink{Map_8cs_source}{Map.\+cs}}.
+
+\mbox{\Hypertarget{classJewelCollector_1_1Map_ab93e9d7c66eed3ec9917458a99e143f0}\label{classJewelCollector_1_1Map_ab93e9d7c66eed3ec9917458a99e143f0}} 
+\index{JewelCollector.Map@{JewelCollector.Map}!IsAdjacentToRadioactive@{IsAdjacentToRadioactive}}
+\index{IsAdjacentToRadioactive@{IsAdjacentToRadioactive}!JewelCollector.Map@{JewelCollector.Map}}
+\doxysubsubsection{\texorpdfstring{IsAdjacentToRadioactive()}{IsAdjacentToRadioactive()}}
+{\footnotesize\ttfamily bool Jewel\+Collector.\+Map.\+Is\+Adjacent\+To\+Radioactive (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structJewelCollector_1_1Position}{Position}}?}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Verifica se há um elemento radioativo em uma posição adjacente  
+
+\begin{DoxyReturn}{Returns}
+True caso possua, False caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Map_8cs_source_l00224}{224}} of file \mbox{\hyperlink{Map_8cs_source}{Map.\+cs}}.
+
+\mbox{\Hypertarget{classJewelCollector_1_1Map_a39b34b6436ae2457a3fe1e0a186ea3d9}\label{classJewelCollector_1_1Map_a39b34b6436ae2457a3fe1e0a186ea3d9}} 
+\index{JewelCollector.Map@{JewelCollector.Map}!IsPositionBlocked@{IsPositionBlocked}}
+\index{IsPositionBlocked@{IsPositionBlocked}!JewelCollector.Map@{JewelCollector.Map}}
+\doxysubsubsection{\texorpdfstring{IsPositionBlocked()}{IsPositionBlocked()}}
+{\footnotesize\ttfamily bool Jewel\+Collector.\+Map.\+Is\+Position\+Blocked (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structJewelCollector_1_1Position}{Position}}?}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Verifica se determinada posição está sendo ocupada por outro item intransponível.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Posição a se verificar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True caso esteja bloqueada, False caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Map_8cs_source_l00209}{209}} of file \mbox{\hyperlink{Map_8cs_source}{Map.\+cs}}.
+
+\mbox{\Hypertarget{classJewelCollector_1_1Map_a75a79e5960e17a41608b0faf0be1870e}\label{classJewelCollector_1_1Map_a75a79e5960e17a41608b0faf0be1870e}} 
+\index{JewelCollector.Map@{JewelCollector.Map}!IsPositionValid@{IsPositionValid}}
+\index{IsPositionValid@{IsPositionValid}!JewelCollector.Map@{JewelCollector.Map}}
+\doxysubsubsection{\texorpdfstring{IsPositionValid()}{IsPositionValid()}}
+{\footnotesize\ttfamily bool Jewel\+Collector.\+Map.\+Is\+Position\+Valid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structJewelCollector_1_1Position}{Position}}?}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Verifica se uma posição está dentro dos limites do mapa.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Posição a se verificar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True caso seja válida, False caso contrário. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Map_8cs_source_l00246}{246}} of file \mbox{\hyperlink{Map_8cs_source}{Map.\+cs}}.
+
+\mbox{\Hypertarget{classJewelCollector_1_1Map_a5dfc5ea5c3dc7758241fd5237f8a8ead}\label{classJewelCollector_1_1Map_a5dfc5ea5c3dc7758241fd5237f8a8ead}} 
+\index{JewelCollector.Map@{JewelCollector.Map}!Move@{Move}}
+\index{Move@{Move}!JewelCollector.Map@{JewelCollector.Map}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily void Jewel\+Collector.\+Map.\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJewelCollector_1_1Placeable}{Placeable}}}]{placeable,  }\item[{\mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable_aec5fc5a66f11a9c24ab60d0be09bebab}{IMoveable.\+Move\+Directions}}}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Move um item para determinada posição.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em placeable} & Item a ser movido. \\
+\hline
+{\em direction} & Direção a qual mover. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Map_8cs_source_l00105}{105}} of file \mbox{\hyperlink{Map_8cs_source}{Map.\+cs}}.
+
+\mbox{\Hypertarget{classJewelCollector_1_1Map_a733b37eddf009baac08f13f7dc36a900}\label{classJewelCollector_1_1Map_a733b37eddf009baac08f13f7dc36a900}} 
+\index{JewelCollector.Map@{JewelCollector.Map}!Place@{Place}}
+\index{Place@{Place}!JewelCollector.Map@{JewelCollector.Map}}
+\doxysubsubsection{\texorpdfstring{Place()}{Place()}}
+{\footnotesize\ttfamily void Jewel\+Collector.\+Map.\+Place (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJewelCollector_1_1Placeable}{Placeable}}}]{placeable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Coloca um item em sua posição inicial.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em placeable} & Item a ser colocado. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Map_8cs_source_l00157}{157}} of file \mbox{\hyperlink{Map_8cs_source}{Map.\+cs}}.
+
+\mbox{\Hypertarget{classJewelCollector_1_1Map_a1853e9f567638fff9b7c17377837b1f1}\label{classJewelCollector_1_1Map_a1853e9f567638fff9b7c17377837b1f1}} 
+\index{JewelCollector.Map@{JewelCollector.Map}!Print@{Print}}
+\index{Print@{Print}!JewelCollector.Map@{JewelCollector.Map}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily void Jewel\+Collector.\+Map.\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Exibe o mapa.  
+
+
+
+Definition at line \mbox{\hyperlink{Map_8cs_source_l00171}{171}} of file \mbox{\hyperlink{Map_8cs_source}{Map.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classJewelCollector_1_1Map_a377c879f548033635965c1eb6a78a595}\label{classJewelCollector_1_1Map_a377c879f548033635965c1eb6a78a595}} 
+\index{JewelCollector.Map@{JewelCollector.Map}!\_logger@{\_logger}}
+\index{\_logger@{\_logger}!JewelCollector.Map@{JewelCollector.Map}}
+\doxysubsubsection{\texorpdfstring{\_logger}{\_logger}}
+{\footnotesize\ttfamily readonly ILogger$<$\mbox{\hyperlink{classJewelCollector_1_1Map}{Map}}$>$ Jewel\+Collector.\+Map.\+\_\+logger\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Map_8cs_source_l00011}{11}} of file \mbox{\hyperlink{Map_8cs_source}{Map.\+cs}}.
+
+\mbox{\Hypertarget{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}\label{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}} 
+\index{JewelCollector.Map@{JewelCollector.Map}!\_map@{\_map}}
+\index{\_map@{\_map}!JewelCollector.Map@{JewelCollector.Map}}
+\doxysubsubsection{\texorpdfstring{\_map}{\_map}}
+{\footnotesize\ttfamily readonly? \mbox{\hyperlink{classJewelCollector_1_1Placeable}{Placeable}} \mbox{[},\mbox{]} Jewel\+Collector.\+Map.\+\_\+map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Map_8cs_source_l00012}{12}} of file \mbox{\hyperlink{Map_8cs_source}{Map.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Jewel\+Collector/\+Jewel\+Collector/\mbox{\hyperlink{Map_8cs}{Map.\+cs}}\end{DoxyCompactItemize}
