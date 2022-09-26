@@ -1,0 +1,210 @@
+\hypertarget{Map_8cs_source}{}\doxysection{Map.\+cs}
+\label{Map_8cs_source}\index{JewelCollector/JewelCollector/Map.cs@{JewelCollector/JewelCollector/Map.cs}}
+\mbox{\hyperlink{Map_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00001}00001 \textcolor{keyword}{using }Microsoft.Extensions.Logging;}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceJewelCollector}{JewelCollector}};}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00008}\mbox{\hyperlink{classJewelCollector_1_1Map}{00008}} \textcolor{keyword}{internal} \textcolor{keyword}{class }\mbox{\hyperlink{classJewelCollector_1_1Map}{Map}}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00010}00010 \textcolor{preprocessor}{    \#region Fields}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00011}\mbox{\hyperlink{classJewelCollector_1_1Map_a377c879f548033635965c1eb6a78a595}{00011}}     \textcolor{keyword}{private} readonly ILogger<Map> \mbox{\hyperlink{classJewelCollector_1_1Map_a377c879f548033635965c1eb6a78a595}{\_logger}};}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00012}\mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{00012}}     \textcolor{keyword}{private} readonly \mbox{\hyperlink{classJewelCollector_1_1Placeable}{Placeable}}?[,] \mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}};}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00013}00013 \textcolor{preprocessor}{    \#endregion Fields}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00015}00015 \textcolor{preprocessor}{    \#region Constructor}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00021}\mbox{\hyperlink{classJewelCollector_1_1Map_ab3333f7554ed101f7c37e1feede438f5}{00021}}     \textcolor{keyword}{internal} \mbox{\hyperlink{classJewelCollector_1_1Map_ab3333f7554ed101f7c37e1feede438f5}{Map}}(ILogger<Map> logger, \textcolor{keywordtype}{byte} size)}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00022}00022     \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00023}00023         \mbox{\hyperlink{classJewelCollector_1_1Map_a377c879f548033635965c1eb6a78a595}{\_logger}} = logger;}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00024}00024         \mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}} = \textcolor{keyword}{new} \mbox{\hyperlink{classJewelCollector_1_1Placeable}{Placeable}}?[size, size];}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00025}00025     \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00026}00026 \textcolor{preprocessor}{    \#endregion Constructor}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00028}00028 \textcolor{preprocessor}{    \#region Visible Methods}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00033}\mbox{\hyperlink{classJewelCollector_1_1Map_af08fba6577219e7748274736dab84a82}{00033}}     \textcolor{keyword}{internal} ushort \mbox{\hyperlink{classJewelCollector_1_1Map_af08fba6577219e7748274736dab84a82}{CountJewels}}()}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00034}00034     \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00035}00035         ushort count = 0;}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00036}00036         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y < \mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}.GetLength(0); y++)}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00037}00037             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = 0; x < \mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}.GetLength(1); x++)}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00038}00038                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}[y, x] != \textcolor{keyword}{null} \&\& \mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}[y, x] is \mbox{\hyperlink{classJewelCollector_1_1Jewel}{Jewel}})}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00039}00039                     count++;}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00040}00040         \textcolor{keywordflow}{return} count;}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00041}00041     \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00048}\mbox{\hyperlink{classJewelCollector_1_1Map_a91956fb1237d2581cbdab7a333ff5a21}{00048}}     \textcolor{keyword}{internal} \mbox{\hyperlink{classJewelCollector_1_1Placeable}{Placeable}}? \mbox{\hyperlink{classJewelCollector_1_1Map_a91956fb1237d2581cbdab7a333ff5a21}{GetAdjacentItem}}(\mbox{\hyperlink{structJewelCollector_1_1Position}{Position}} position)}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00049}00049     \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00050}00050         \textcolor{keywordflow}{foreach} (\mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable}{IMoveable}}.\mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable_aec5fc5a66f11a9c24ab60d0be09bebab}{MoveDirections}} direction in Enum.GetValues(typeof(\mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable}{IMoveable}}.\mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable_aec5fc5a66f11a9c24ab60d0be09bebab}{MoveDirections}})).Cast<\mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable}{IMoveable}}.\mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable_aec5fc5a66f11a9c24ab60d0be09bebab}{MoveDirections}}>())}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00051}00051         \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00052}00052             \mbox{\hyperlink{structJewelCollector_1_1Position}{Position}} nextPosition = \mbox{\hyperlink{classJewelCollector_1_1Map_a346dec5779baa9301218228894a7f650}{GetNextPosition}}(position, direction);}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00053}00053             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classJewelCollector_1_1Map_a75a79e5960e17a41608b0faf0be1870e}{IsPositionValid}}(nextPosition))}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00054}00054             \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00055}00055                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}[nextPosition.\mbox{\hyperlink{structJewelCollector_1_1Position_ae71640cd8f7184d5ef7c95f43a288bbe}{y}}, nextPosition.\mbox{\hyperlink{structJewelCollector_1_1Position_a61a7c24b510c3ee24a91144af6e889d1}{x}}] is \mbox{\hyperlink{classJewelCollector_1_1Jewel}{Jewel}} jewel)}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00056}00056                 \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00057}00057                     \mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}[nextPosition.\mbox{\hyperlink{structJewelCollector_1_1Position_ae71640cd8f7184d5ef7c95f43a288bbe}{y}}, nextPosition.\mbox{\hyperlink{structJewelCollector_1_1Position_a61a7c24b510c3ee24a91144af6e889d1}{x}}] = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00058}00058                     \textcolor{keywordflow}{return} jewel;}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00059}00059                 \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00060}00060                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}[nextPosition.\mbox{\hyperlink{structJewelCollector_1_1Position_ae71640cd8f7184d5ef7c95f43a288bbe}{y}}, nextPosition.\mbox{\hyperlink{structJewelCollector_1_1Position_a61a7c24b510c3ee24a91144af6e889d1}{x}}] is \mbox{\hyperlink{classJewelCollector_1_1Obstacle}{Obstacle}} obstacle \&\& obstacle.\mbox{\hyperlink{classJewelCollector_1_1Obstacle_a09b33a2c0fcda14c0279120b27a832ab}{Type}} == \mbox{\hyperlink{classJewelCollector_1_1Obstacle}{Obstacle}}.\mbox{\hyperlink{classJewelCollector_1_1Obstacle_a5484d1e9c365a953ddb5fa59b75d09e2}{Types}}.Tree)}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00061}00061                 \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00062}00062                     \mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}[nextPosition.\mbox{\hyperlink{structJewelCollector_1_1Position_ae71640cd8f7184d5ef7c95f43a288bbe}{y}}, nextPosition.\mbox{\hyperlink{structJewelCollector_1_1Position_a61a7c24b510c3ee24a91144af6e889d1}{x}}] = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00063}00063                     \textcolor{keywordflow}{return} obstacle;}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00064}00064                 \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00066}00066             \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00067}00067         \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00069}00069         \mbox{\hyperlink{classJewelCollector_1_1LogHelper}{LogHelper}}.\mbox{\hyperlink{classJewelCollector_1_1LogHelper_ab882adec52df7177a90382f8dc6f172c}{QueueLog}}(\mbox{\hyperlink{classJewelCollector_1_1Map_a377c879f548033635965c1eb6a78a595}{\_logger}}, \mbox{\hyperlink{structJewelCollector_1_1LogEntry}{LogEntry}}.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_a2c2b4c14336985c2b5fff2555081427d}{Types}}.Warning, \$\textcolor{stringliteral}{"{}There are no items adjacent to \{position\}"{}});}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00070}00070         \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00071}00071     \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00077}\mbox{\hyperlink{classJewelCollector_1_1Map_a8606ecf1cef81fab62b3b35e0b641117}{00077}}     \textcolor{keyword}{internal} \mbox{\hyperlink{structJewelCollector_1_1Position}{Position}} \mbox{\hyperlink{classJewelCollector_1_1Map_a8606ecf1cef81fab62b3b35e0b641117}{GetEmptyPosition}}()}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00078}00078     \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00079}00079         \mbox{\hyperlink{structJewelCollector_1_1Position}{Position}} emptyPosition = \textcolor{keyword}{new}(0, 0);}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00080}00080         Random random = \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00082}00082         \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00083}00083         \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00084}00084             \textcolor{keywordflow}{do}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00085}00085             \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00086}00086                 emptyPosition = \textcolor{keyword}{new} \mbox{\hyperlink{structJewelCollector_1_1Position}{Position}}((\textcolor{keywordtype}{byte})random.Next(\mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}.GetLength(0)), (\textcolor{keywordtype}{byte})random.Next(\mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}.GetLength(1)));}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00087}00087             \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00088}00088             \textcolor{keywordflow}{while} (\mbox{\hyperlink{classJewelCollector_1_1Map_a39b34b6436ae2457a3fe1e0a186ea3d9}{IsPositionBlocked}}(emptyPosition));}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00090}00090             \textcolor{keywordflow}{return} emptyPosition;}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00091}00091         \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00092}00092         \textcolor{keywordflow}{catch} (Exception ex)}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00093}00093         \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00094}00094             \mbox{\hyperlink{classJewelCollector_1_1LogHelper}{LogHelper}}.\mbox{\hyperlink{classJewelCollector_1_1LogHelper_ab882adec52df7177a90382f8dc6f172c}{QueueLog}}(\mbox{\hyperlink{classJewelCollector_1_1Map_a377c879f548033635965c1eb6a78a595}{\_logger}}, \mbox{\hyperlink{structJewelCollector_1_1LogEntry}{LogEntry}}.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_a2c2b4c14336985c2b5fff2555081427d}{Types}}.Error, ex.Message, ex);}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00095}00095         \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00097}00097         \textcolor{keywordflow}{return} emptyPosition;}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00098}00098     \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00105}\mbox{\hyperlink{classJewelCollector_1_1Map_a5dfc5ea5c3dc7758241fd5237f8a8ead}{00105}}     \textcolor{keyword}{internal} \textcolor{keywordtype}{void} \mbox{\hyperlink{classJewelCollector_1_1Map_a5dfc5ea5c3dc7758241fd5237f8a8ead}{Move}}(\mbox{\hyperlink{classJewelCollector_1_1Placeable}{Placeable}} placeable, \mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable}{IMoveable}}.\mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable_aec5fc5a66f11a9c24ab60d0be09bebab}{MoveDirections}} direction)}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00106}00106     \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00107}00107         \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00108}00108         \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00109}00109             \textcolor{keywordflow}{if} (placeable is \mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable}{IMoveable}} moveable)}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00110}00110             \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00111}00111                 \mbox{\hyperlink{structJewelCollector_1_1Position}{Position}} nextPosition = \mbox{\hyperlink{classJewelCollector_1_1Map_a346dec5779baa9301218228894a7f650}{GetNextPosition}}(placeable.\mbox{\hyperlink{classJewelCollector_1_1Placeable_ab171f9e3ae24f478628908df5df18cb0}{Position}}, direction);}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00112}00112                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classJewelCollector_1_1Map_a75a79e5960e17a41608b0faf0be1870e}{IsPositionValid}}(nextPosition))}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00113}00113                 \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00114}00114                     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classJewelCollector_1_1Map_a39b34b6436ae2457a3fe1e0a186ea3d9}{IsPositionBlocked}}(nextPosition))}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00115}00115                     \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00116}00116                         \textcolor{comment}{// Dano radioativo}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00117}00117                         \textcolor{keywordflow}{if} (placeable is \mbox{\hyperlink{classJewelCollector_1_1Robot}{Robot}} player)}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00118}00118                         \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00119}00119                             \textcolor{comment}{// Se passar em cima}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00120}00120                             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}[nextPosition.\mbox{\hyperlink{structJewelCollector_1_1Position_ae71640cd8f7184d5ef7c95f43a288bbe}{y}}, nextPosition.\mbox{\hyperlink{structJewelCollector_1_1Position_a61a7c24b510c3ee24a91144af6e889d1}{x}}] is \mbox{\hyperlink{classJewelCollector_1_1Obstacle}{Obstacle}} obstacle \&\& obstacle.\mbox{\hyperlink{classJewelCollector_1_1Obstacle_a09b33a2c0fcda14c0279120b27a832ab}{Type}} == \mbox{\hyperlink{classJewelCollector_1_1Obstacle}{Obstacle}}.\mbox{\hyperlink{classJewelCollector_1_1Obstacle_a5484d1e9c365a953ddb5fa59b75d09e2}{Types}}.Radioactive)}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00121}00121                             \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00122}00122                                 player.Energy -\/= 30;}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00123}00123                                 \mbox{\hyperlink{classJewelCollector_1_1LogHelper}{LogHelper}}.\mbox{\hyperlink{classJewelCollector_1_1LogHelper_ab882adec52df7177a90382f8dc6f172c}{QueueLog}}(\mbox{\hyperlink{classJewelCollector_1_1Map_a377c879f548033635965c1eb6a78a595}{\_logger}}, \mbox{\hyperlink{structJewelCollector_1_1LogEntry}{LogEntry}}.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_a2c2b4c14336985c2b5fff2555081427d}{Types}}.Warning, \textcolor{stringliteral}{"{}Alto dano radioativo recebido"{}});}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00124}00124                             \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00125}00125                             \textcolor{comment}{// Se estiver adjacente}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00126}00126                             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classJewelCollector_1_1Map_ab93e9d7c66eed3ec9917458a99e143f0}{IsAdjacentToRadioactive}}(nextPosition))}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00127}00127                             \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00128}00128                                 player.Energy -\/= 10;}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00129}00129                                 \mbox{\hyperlink{classJewelCollector_1_1LogHelper}{LogHelper}}.\mbox{\hyperlink{classJewelCollector_1_1LogHelper_ab882adec52df7177a90382f8dc6f172c}{QueueLog}}(\mbox{\hyperlink{classJewelCollector_1_1Map_a377c879f548033635965c1eb6a78a595}{\_logger}}, \mbox{\hyperlink{structJewelCollector_1_1LogEntry}{LogEntry}}.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_a2c2b4c14336985c2b5fff2555081427d}{Types}}.Warning, \textcolor{stringliteral}{"{}Dano radioativo recebido"{}});}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00130}00130                             \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00131}00131                         \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00133}00133                         \textcolor{comment}{// Mover}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00134}00134                         \mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}[placeable.\mbox{\hyperlink{classJewelCollector_1_1Placeable_ab171f9e3ae24f478628908df5df18cb0}{Position}}.\mbox{\hyperlink{structJewelCollector_1_1Position_ae71640cd8f7184d5ef7c95f43a288bbe}{y}}, placeable.\mbox{\hyperlink{classJewelCollector_1_1Placeable_ab171f9e3ae24f478628908df5df18cb0}{Position}}.\mbox{\hyperlink{structJewelCollector_1_1Position_a61a7c24b510c3ee24a91144af6e889d1}{x}}] = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00135}00135                         \mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}[nextPosition.\mbox{\hyperlink{structJewelCollector_1_1Position_ae71640cd8f7184d5ef7c95f43a288bbe}{y}}, nextPosition.\mbox{\hyperlink{structJewelCollector_1_1Position_a61a7c24b510c3ee24a91144af6e889d1}{x}}] = placeable;}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00136}00136                         moveable.Move(nextPosition);}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00137}00137                     \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00138}00138                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00139}00139                         \textcolor{keywordflow}{throw} \textcolor{keyword}{new} Exception(\$\textcolor{stringliteral}{"{}Blocked position: \{nextPosition\}"{}});}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00140}00140                 \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00141}00141                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00142}00142                     \textcolor{keywordflow}{throw} \textcolor{keyword}{new} Exception(\$\textcolor{stringliteral}{"{}Invalid position: \{nextPosition\}"{}});}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00143}00143             \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00144}00144             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00145}00145                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} Exception(\$\textcolor{stringliteral}{"{}\{placeable.GetType()\} is not moveable."{}});}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00146}00146         \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00147}00147         \textcolor{keywordflow}{catch} (Exception ex)}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00148}00148         \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00149}00149             \mbox{\hyperlink{classJewelCollector_1_1LogHelper}{LogHelper}}.\mbox{\hyperlink{classJewelCollector_1_1LogHelper_ab882adec52df7177a90382f8dc6f172c}{QueueLog}}(\mbox{\hyperlink{classJewelCollector_1_1Map_a377c879f548033635965c1eb6a78a595}{\_logger}}, \mbox{\hyperlink{structJewelCollector_1_1LogEntry}{LogEntry}}.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_a2c2b4c14336985c2b5fff2555081427d}{Types}}.Warning, ex.Message, ex);}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00150}00150         \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00151}00151     \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00152}00152 }
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00157}\mbox{\hyperlink{classJewelCollector_1_1Map_a733b37eddf009baac08f13f7dc36a900}{00157}}     \textcolor{keyword}{internal} \textcolor{keywordtype}{void} \mbox{\hyperlink{classJewelCollector_1_1Map_a733b37eddf009baac08f13f7dc36a900}{Place}}(\mbox{\hyperlink{classJewelCollector_1_1Placeable}{Placeable}} placeable)}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00158}00158     \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00159}00159         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}[placeable.\mbox{\hyperlink{classJewelCollector_1_1Placeable_ab171f9e3ae24f478628908df5df18cb0}{Position}}.\mbox{\hyperlink{structJewelCollector_1_1Position_ae71640cd8f7184d5ef7c95f43a288bbe}{y}}, placeable.\mbox{\hyperlink{classJewelCollector_1_1Placeable_ab171f9e3ae24f478628908df5df18cb0}{Position}}.\mbox{\hyperlink{structJewelCollector_1_1Position_a61a7c24b510c3ee24a91144af6e889d1}{x}}] == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00160}00160         \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00161}00161             \mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}[placeable.\mbox{\hyperlink{classJewelCollector_1_1Placeable_ab171f9e3ae24f478628908df5df18cb0}{Position}}.\mbox{\hyperlink{structJewelCollector_1_1Position_ae71640cd8f7184d5ef7c95f43a288bbe}{y}}, placeable.\mbox{\hyperlink{classJewelCollector_1_1Placeable_ab171f9e3ae24f478628908df5df18cb0}{Position}}.\mbox{\hyperlink{structJewelCollector_1_1Position_a61a7c24b510c3ee24a91144af6e889d1}{x}}] = placeable;}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00162}00162             \mbox{\hyperlink{classJewelCollector_1_1LogHelper}{LogHelper}}.\mbox{\hyperlink{classJewelCollector_1_1LogHelper_ab882adec52df7177a90382f8dc6f172c}{QueueLog}}(\mbox{\hyperlink{classJewelCollector_1_1Map_a377c879f548033635965c1eb6a78a595}{\_logger}}, \mbox{\hyperlink{structJewelCollector_1_1LogEntry}{LogEntry}}.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_a2c2b4c14336985c2b5fff2555081427d}{Types}}.Debug, \$\textcolor{stringliteral}{"{}Added \{placeable.GetType()\} to \{placeable.Position\}"{}});}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00163}00163         \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00164}00164         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00165}00165             \mbox{\hyperlink{classJewelCollector_1_1LogHelper}{LogHelper}}.\mbox{\hyperlink{classJewelCollector_1_1LogHelper_ab882adec52df7177a90382f8dc6f172c}{QueueLog}}(\mbox{\hyperlink{classJewelCollector_1_1Map_a377c879f548033635965c1eb6a78a595}{\_logger}}, \mbox{\hyperlink{structJewelCollector_1_1LogEntry}{LogEntry}}.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_a2c2b4c14336985c2b5fff2555081427d}{Types}}.Warning, \$\textcolor{stringliteral}{"{}Position \{placeable.Position\} already occupied"{}});}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00166}00166     \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00167}00167 }
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00171}\mbox{\hyperlink{classJewelCollector_1_1Map_a1853e9f567638fff9b7c17377837b1f1}{00171}}     \textcolor{keyword}{internal} \textcolor{keywordtype}{void} \mbox{\hyperlink{classJewelCollector_1_1Map_a1853e9f567638fff9b7c17377837b1f1}{Print}}()}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00172}00172     \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00173}00173         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y < \mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}.GetLength(0); y++)}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00174}00174         \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00175}00175             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = 0; x < \mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}.GetLength(1); x++)}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00176}00176             \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00177}00177                 \textcolor{keywordtype}{string}? symbol = \mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}[y, x] != \textcolor{keyword}{null} ? \mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}[y, x]?.\mbox{\hyperlink{classJewelCollector_1_1Placeable_a78e83d27014a03493770c1ece890a6ab}{Symbol}} : \textcolor{stringliteral}{"{}-\/-\/"{}};}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00178}00178                 Console.Write(\$\textcolor{stringliteral}{"{}\{symbol\} "{}});}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00179}00179             \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00180}00180             Console.WriteLine();}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00181}00181         \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00182}00182     \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00183}00183 \textcolor{preprocessor}{    \#endregion Visible Methods}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00184}00184 }
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00185}00185 \textcolor{preprocessor}{    \#region Private Methods}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00192}\mbox{\hyperlink{classJewelCollector_1_1Map_a346dec5779baa9301218228894a7f650}{00192}}     \textcolor{keyword}{private} \textcolor{keyword}{static} \mbox{\hyperlink{structJewelCollector_1_1Position}{Position}} \mbox{\hyperlink{classJewelCollector_1_1Map_a346dec5779baa9301218228894a7f650}{GetNextPosition}}(\mbox{\hyperlink{structJewelCollector_1_1Position}{Position}} oldPosition, \mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable}{IMoveable}}.\mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable_aec5fc5a66f11a9c24ab60d0be09bebab}{MoveDirections}} direction)}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00193}00193     \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00194}00194         \textcolor{keywordflow}{return} direction \textcolor{keywordflow}{switch}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00195}00195         \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00196}00196             IMoveable.MoveDirections.North => \textcolor{keyword}{new} \mbox{\hyperlink{structJewelCollector_1_1Position}{Position}}((\textcolor{keywordtype}{byte})(oldPosition.\mbox{\hyperlink{structJewelCollector_1_1Position_ae71640cd8f7184d5ef7c95f43a288bbe}{y}} -\/ 1), oldPosition.\mbox{\hyperlink{structJewelCollector_1_1Position_a61a7c24b510c3ee24a91144af6e889d1}{x}}),}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00197}00197             IMoveable.MoveDirections.West => \textcolor{keyword}{new} \mbox{\hyperlink{structJewelCollector_1_1Position}{Position}}(oldPosition.\mbox{\hyperlink{structJewelCollector_1_1Position_ae71640cd8f7184d5ef7c95f43a288bbe}{y}}, (\textcolor{keywordtype}{byte})(oldPosition.\mbox{\hyperlink{structJewelCollector_1_1Position_a61a7c24b510c3ee24a91144af6e889d1}{x}} -\/ 1)),}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00198}00198             IMoveable.MoveDirections.South => \textcolor{keyword}{new} \mbox{\hyperlink{structJewelCollector_1_1Position}{Position}}((\textcolor{keywordtype}{byte})(oldPosition.\mbox{\hyperlink{structJewelCollector_1_1Position_ae71640cd8f7184d5ef7c95f43a288bbe}{y}} + 1), oldPosition.\mbox{\hyperlink{structJewelCollector_1_1Position_a61a7c24b510c3ee24a91144af6e889d1}{x}}),}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00199}00199             IMoveable.MoveDirections.East => \textcolor{keyword}{new} \mbox{\hyperlink{structJewelCollector_1_1Position}{Position}}(oldPosition.\mbox{\hyperlink{structJewelCollector_1_1Position_ae71640cd8f7184d5ef7c95f43a288bbe}{y}}, (\textcolor{keywordtype}{byte})(oldPosition.\mbox{\hyperlink{structJewelCollector_1_1Position_a61a7c24b510c3ee24a91144af6e889d1}{x}} + 1)),}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00200}00200             \_ => oldPosition}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00201}00201         \};}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00202}00202     \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00203}00203 }
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00209}\mbox{\hyperlink{classJewelCollector_1_1Map_a39b34b6436ae2457a3fe1e0a186ea3d9}{00209}}     \textcolor{keyword}{private} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classJewelCollector_1_1Map_a39b34b6436ae2457a3fe1e0a186ea3d9}{IsPositionBlocked}}(\mbox{\hyperlink{structJewelCollector_1_1Position}{Position}}? position)}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00210}00210     \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00211}00211         \textcolor{keywordflow}{if} (position == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00212}00212             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} NullReferenceException(\textcolor{stringliteral}{"{}Position is null"{}});}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00213}00213         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00214}00214         \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00215}00215             \mbox{\hyperlink{structJewelCollector_1_1Position}{Position}} pos = (\mbox{\hyperlink{structJewelCollector_1_1Position}{Position}})position;}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00216}00216             \textcolor{keywordflow}{return} \mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}[pos.\mbox{\hyperlink{structJewelCollector_1_1Position_ae71640cd8f7184d5ef7c95f43a288bbe}{y}}, pos.\mbox{\hyperlink{structJewelCollector_1_1Position_a61a7c24b510c3ee24a91144af6e889d1}{x}}] != \textcolor{keyword}{null} \&\& ((\mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}[pos.\mbox{\hyperlink{structJewelCollector_1_1Position_ae71640cd8f7184d5ef7c95f43a288bbe}{y}}, pos.\mbox{\hyperlink{structJewelCollector_1_1Position_a61a7c24b510c3ee24a91144af6e889d1}{x}}] is \mbox{\hyperlink{classJewelCollector_1_1Obstacle}{Obstacle}} obstacle \&\& obstacle.Type != \mbox{\hyperlink{classJewelCollector_1_1Obstacle}{Obstacle}}.\mbox{\hyperlink{classJewelCollector_1_1Obstacle_a5484d1e9c365a953ddb5fa59b75d09e2}{Types}}.Radioactive) || \mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}[pos.\mbox{\hyperlink{structJewelCollector_1_1Position_ae71640cd8f7184d5ef7c95f43a288bbe}{y}}, pos.\mbox{\hyperlink{structJewelCollector_1_1Position_a61a7c24b510c3ee24a91144af6e889d1}{x}}] is \mbox{\hyperlink{classJewelCollector_1_1Jewel}{Jewel}});}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00217}00217         \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00218}00218     \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00219}00219 }
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00224}\mbox{\hyperlink{classJewelCollector_1_1Map_ab93e9d7c66eed3ec9917458a99e143f0}{00224}}     \textcolor{keyword}{private} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classJewelCollector_1_1Map_ab93e9d7c66eed3ec9917458a99e143f0}{IsAdjacentToRadioactive}}(\mbox{\hyperlink{structJewelCollector_1_1Position}{Position}}? position)}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00225}00225     \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00226}00226         \textcolor{keywordflow}{if} (position == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00227}00227             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} NullReferenceException(\textcolor{stringliteral}{"{}Position is null"{}});}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00228}00228         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00229}00229         \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00230}00230             \textcolor{keywordflow}{foreach} (\mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable}{IMoveable}}.\mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable_aec5fc5a66f11a9c24ab60d0be09bebab}{MoveDirections}} direction in Enum.GetValues(typeof(\mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable}{IMoveable}}.\mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable_aec5fc5a66f11a9c24ab60d0be09bebab}{MoveDirections}})).Cast<\mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable}{IMoveable}}.\mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable_aec5fc5a66f11a9c24ab60d0be09bebab}{MoveDirections}}>())}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00231}00231             \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00232}00232                 \mbox{\hyperlink{structJewelCollector_1_1Position}{Position}} pos = \mbox{\hyperlink{classJewelCollector_1_1Map_a346dec5779baa9301218228894a7f650}{GetNextPosition}}((\mbox{\hyperlink{structJewelCollector_1_1Position}{Position}})position, direction);}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00233}00233                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classJewelCollector_1_1Map_a75a79e5960e17a41608b0faf0be1870e}{IsPositionValid}}(pos) \&\& \mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}[pos.\mbox{\hyperlink{structJewelCollector_1_1Position_ae71640cd8f7184d5ef7c95f43a288bbe}{y}}, pos.\mbox{\hyperlink{structJewelCollector_1_1Position_a61a7c24b510c3ee24a91144af6e889d1}{x}}] != \textcolor{keyword}{null} \&\& \mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}[pos.\mbox{\hyperlink{structJewelCollector_1_1Position_ae71640cd8f7184d5ef7c95f43a288bbe}{y}}, pos.\mbox{\hyperlink{structJewelCollector_1_1Position_a61a7c24b510c3ee24a91144af6e889d1}{x}}] is \mbox{\hyperlink{classJewelCollector_1_1Obstacle}{Obstacle}} obstacle \&\& obstacle.\mbox{\hyperlink{classJewelCollector_1_1Obstacle_a09b33a2c0fcda14c0279120b27a832ab}{Type}} == \mbox{\hyperlink{classJewelCollector_1_1Obstacle}{Obstacle}}.\mbox{\hyperlink{classJewelCollector_1_1Obstacle_a5484d1e9c365a953ddb5fa59b75d09e2}{Types}}.Radioactive)}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00234}00234                     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00235}00235             \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00236}00236         \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00237}00237 }
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00238}00238         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00239}00239     \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00240}00240 }
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00246}\mbox{\hyperlink{classJewelCollector_1_1Map_a75a79e5960e17a41608b0faf0be1870e}{00246}}     \textcolor{keyword}{private} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classJewelCollector_1_1Map_a75a79e5960e17a41608b0faf0be1870e}{IsPositionValid}}(\mbox{\hyperlink{structJewelCollector_1_1Position}{Position}}? position)}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00247}00247     \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00248}00248         \textcolor{keywordflow}{if} (position == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00249}00249             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} NullReferenceException(\textcolor{stringliteral}{"{}Position is null"{}});}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00250}00250         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00251}00251         \{}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00252}00252             \mbox{\hyperlink{structJewelCollector_1_1Position}{Position}} pos = (\mbox{\hyperlink{structJewelCollector_1_1Position}{Position}})position;}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00253}00253             \textcolor{keywordflow}{return} pos.y >= 0 \&\& pos.y < \mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}.GetLength(0) \&\& pos.x >= 0 \&\& pos.x < \mbox{\hyperlink{classJewelCollector_1_1Map_a741b27c7839cf8337eb460ac525e4550}{\_map}}.GetLength(1);}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00254}00254         \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00255}00255     \}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00256}00256 \textcolor{preprocessor}{    \#endregion Private Methods}}
+\DoxyCodeLine{\Hypertarget{Map_8cs_source_l00257}00257 \}}
+
+\end{DoxyCode}

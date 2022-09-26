@@ -1,4 +1,3 @@
-using System.Collections.ObjectModel;
 using Microsoft.Extensions.Logging;
 
 namespace JewelCollector;
@@ -11,17 +10,28 @@ internal class Robot : Placeable, IMoveable
     #region Fields
     private readonly ILogger<Robot> _logger;
     private readonly ushort[] _bag = new ushort[Enum.GetNames(typeof(Jewel.Types)).Length];
+    private ushort _collectedTrees = 0;
     #endregion Fields
 
     #region Properties
+    /// <summary>
+    /// Símbolo usado para representar o jogador.
+    /// </summary>
     internal override string Symbol { get => "ME"; }
+    /// <summary>
+    /// Quantidade de energia que o jogador usa para se mover.
+    /// </summary>
+    internal ushort Energy { get; set; } = 20;
     #endregion Properties
 
     #region Constructor
     /// <summary>
     /// Construtor padrão da classe.
     /// </summary>
-    /// <param name="position"> Posição inicial no mapa. </param>
+    /// <param name="logger"> Objeto responsável por registrar mensagens. </param>
+    /// <param name="y"> Posição 'y' no mapa. </param>
+    /// <param name="x"> Posição 'x' no mapa. </param>
+    /// <returns></returns>
     internal Robot(ILogger<Robot> logger, byte y, byte x) : base(y, x)
     {
         _logger = logger;
@@ -30,16 +40,33 @@ internal class Robot : Placeable, IMoveable
 
     #region Visible Methods
     /// <summary>
-    /// 
+    /// Coleta um item, usa seu efeito e adiciona na sacola.
     /// </summary>
-    internal void CollectJewel(Jewel.Types type)
+    internal void CollectItem(Placeable item)
     {
-        _bag[(int)type] += 1;
-        LogHelper.QueueLog(_logger, LogEntry.Types.Information, "Jewel collected");
+        if (item is Jewel jewel)
+        {
+            // Adicionar na sacola
+            _bag[(int)jewel.Type] += 1;
+
+            // Usar a joia
+            if (jewel.Type == Jewel.Types.Blue)
+                Energy += 5;
+        }
+        else if (item is Obstacle obstacle && obstacle.Type == Obstacle.Types.Tree)
+        {
+            // Adicionar na sacola
+            _collectedTrees += 1;
+
+            // Usar o obstáculo
+            Energy += 1;
+        }
+
+        LogHelper.QueueLog(_logger, LogEntry.Types.Information, "Item collected");
     }
 
     /// <summary>
-    /// 
+    /// Move-se para determinada posição.
     /// </summary>
     /// <param name="direction"></param>
     public void Move(Position newPosition)
@@ -49,7 +76,7 @@ internal class Robot : Placeable, IMoveable
     }
 
     /// <summary>
-    /// 
+    /// Exibe informações da sacola.
     /// </summary>
     internal void PrintBag()
     {
@@ -61,8 +88,9 @@ internal class Robot : Placeable, IMoveable
             totalItems += _bag[(int)type];
             totalValue += (ushort)(_bag[(int)type] * Jewel.GetValue(type));
         }
+        totalItems += _collectedTrees;
 
-        Console.WriteLine($"Bag total items: {totalItems} | Bag total value: {totalValue}");
+        Console.WriteLine($"Bag total items: {totalItems} | Bag total value: {totalValue} | Energy: {Energy}");
     }
     #endregion Visible Methods
 }

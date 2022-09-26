@@ -1,0 +1,53 @@
+\hypertarget{Jewel_8cs_source}{}\doxysection{Jewel.\+cs}
+\label{Jewel_8cs_source}\index{JewelCollector/JewelCollector/Jewel.cs@{JewelCollector/JewelCollector/Jewel.cs}}
+\mbox{\hyperlink{Jewel_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00001}00001 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceJewelCollector}{JewelCollector}};}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00006}\mbox{\hyperlink{classJewelCollector_1_1Jewel}{00006}} \textcolor{keyword}{internal} \textcolor{keyword}{class }\mbox{\hyperlink{classJewelCollector_1_1Jewel}{Jewel}} : \mbox{\hyperlink{classJewelCollector_1_1Placeable}{Placeable}}}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00007}00007 \{}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00008}00008 \textcolor{preprocessor}{    \#region Enums}}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00012}\mbox{\hyperlink{classJewelCollector_1_1Jewel_acda5be5fe26089f964c9c232fb27e7ef}{00012}}     \textcolor{keyword}{internal} \textcolor{keyword}{enum} \mbox{\hyperlink{classJewelCollector_1_1Jewel_acda5be5fe26089f964c9c232fb27e7ef}{Types}}}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00013}00013     \{}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00014}00014         Red,   }
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00015}00015         Green, }
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00016}00016         Blue   }
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00017}00017     \}}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00018}00018 \textcolor{preprocessor}{    \#endregion}}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00020}00020 \textcolor{preprocessor}{    \#region Properties}}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00024}\mbox{\hyperlink{classJewelCollector_1_1Jewel_abd073cb6b71d54894990cf40aaa21471}{00024}}     \textcolor{keyword}{internal} \textcolor{keyword}{override} \textcolor{keywordtype}{string} \mbox{\hyperlink{classJewelCollector_1_1Jewel_abd073cb6b71d54894990cf40aaa21471}{Symbol}}}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00025}00025     \{}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00026}00026         \textcolor{keyword}{get} => \mbox{\hyperlink{classJewelCollector_1_1Jewel_af0ab034ce7ce305272e9ca0aab42dfe3}{Type}} \textcolor{keywordflow}{switch}}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00027}00027         \{}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00028}00028             Types.Red => \textcolor{stringliteral}{"{}JR"{}},}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00029}00029             Types.Green => \textcolor{stringliteral}{"{}JG"{}},}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00030}00030             Types.Blue => \textcolor{stringliteral}{"{}JB"{}},}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00031}00031             \_ => \textcolor{stringliteral}{"{}J?"{}}}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00032}00032         \};}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00033}00033     \}}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00037}\mbox{\hyperlink{classJewelCollector_1_1Jewel_af0ab034ce7ce305272e9ca0aab42dfe3}{00037}}     \textcolor{keyword}{internal} \mbox{\hyperlink{classJewelCollector_1_1Jewel_acda5be5fe26089f964c9c232fb27e7ef}{Types}} \mbox{\hyperlink{classJewelCollector_1_1Jewel_af0ab034ce7ce305272e9ca0aab42dfe3}{Type}} \{ \textcolor{keyword}{get}; \}}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00038}00038 \textcolor{preprocessor}{    \#endregion Properties}}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00040}00040 \textcolor{preprocessor}{    \#region Constructor}}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00048}\mbox{\hyperlink{classJewelCollector_1_1Jewel_a1e7dcef04ce0810c328f63660308e9e3}{00048}}     \textcolor{keyword}{internal} \mbox{\hyperlink{classJewelCollector_1_1Jewel_a1e7dcef04ce0810c328f63660308e9e3}{Jewel}}(\textcolor{keywordtype}{byte} y, \textcolor{keywordtype}{byte} x, \mbox{\hyperlink{classJewelCollector_1_1Jewel_acda5be5fe26089f964c9c232fb27e7ef}{Types}} type) : base(y, x)}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00049}00049     \{}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00050}00050         \mbox{\hyperlink{classJewelCollector_1_1Jewel_af0ab034ce7ce305272e9ca0aab42dfe3}{Type}} = type;}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00051}00051     \}}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00052}00052 \textcolor{preprocessor}{    \#endregion Constructor}}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00054}00054 \textcolor{preprocessor}{    \#region Visible Methods}}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00060}\mbox{\hyperlink{classJewelCollector_1_1Jewel_a9700d1d0ae8f9ea6352c22fcb5f1b9b7}{00060}}     \textcolor{keyword}{internal} \textcolor{keyword}{static} \textcolor{keywordtype}{byte} \mbox{\hyperlink{classJewelCollector_1_1Jewel_a9700d1d0ae8f9ea6352c22fcb5f1b9b7}{GetValue}}(\mbox{\hyperlink{classJewelCollector_1_1Jewel_acda5be5fe26089f964c9c232fb27e7ef}{Types}} type)}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00061}00061     \{}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00062}00062         \textcolor{keywordflow}{return} type \textcolor{keywordflow}{switch}}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00063}00063         \{}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00064}00064             Types.Red => 100,}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00065}00065             Types.Green => 50,}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00066}00066             Types.Blue => 10,}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00067}00067             \_ => 0}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00068}00068         \};}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00069}00069     \}}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00070}00070 \textcolor{preprocessor}{    \#endregion Visible Methods}}
+\DoxyCodeLine{\Hypertarget{Jewel_8cs_source_l00071}00071 \}}
+
+\end{DoxyCode}

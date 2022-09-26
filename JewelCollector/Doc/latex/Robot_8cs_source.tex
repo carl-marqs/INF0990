@@ -1,0 +1,76 @@
+\hypertarget{Robot_8cs_source}{}\doxysection{Robot.\+cs}
+\label{Robot_8cs_source}\index{JewelCollector/JewelCollector/Robot.cs@{JewelCollector/JewelCollector/Robot.cs}}
+\mbox{\hyperlink{Robot_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00001}00001 \textcolor{keyword}{using }Microsoft.Extensions.Logging;}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceJewelCollector}{JewelCollector}};}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00008}\mbox{\hyperlink{classJewelCollector_1_1Robot}{00008}} \textcolor{keyword}{internal} \textcolor{keyword}{class }\mbox{\hyperlink{classJewelCollector_1_1Robot}{Robot}} : \mbox{\hyperlink{classJewelCollector_1_1Placeable}{Placeable}}, \mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable}{IMoveable}}}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00010}00010 \textcolor{preprocessor}{    \#region Fields}}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00011}\mbox{\hyperlink{classJewelCollector_1_1Robot_a296a542aadf747f03855eee59122e954}{00011}}     \textcolor{keyword}{private} readonly ILogger<Robot> \mbox{\hyperlink{classJewelCollector_1_1Robot_a296a542aadf747f03855eee59122e954}{\_logger}};}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00012}\mbox{\hyperlink{classJewelCollector_1_1Robot_a78269ac9401ab7791733f3a1f6af96b6}{00012}}     \textcolor{keyword}{private} readonly ushort[] \mbox{\hyperlink{classJewelCollector_1_1Robot_a78269ac9401ab7791733f3a1f6af96b6}{\_bag}} = \textcolor{keyword}{new} ushort[Enum.GetNames(typeof(\mbox{\hyperlink{classJewelCollector_1_1Jewel}{Jewel}}.\mbox{\hyperlink{classJewelCollector_1_1Jewel_acda5be5fe26089f964c9c232fb27e7ef}{Types}})).Length];}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00013}\mbox{\hyperlink{classJewelCollector_1_1Robot_ae073825c5fd12bc645dcd690d41571da}{00013}}     \textcolor{keyword}{private} ushort \mbox{\hyperlink{classJewelCollector_1_1Robot_ae073825c5fd12bc645dcd690d41571da}{\_collectedTrees}} = 0;}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00014}00014 \textcolor{preprocessor}{    \#endregion Fields}}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00016}00016 \textcolor{preprocessor}{    \#region Properties}}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00020}\mbox{\hyperlink{classJewelCollector_1_1Robot_a3df8858ff2ef16f6166d955dd80cf2f5}{00020}}     \textcolor{keyword}{internal} \textcolor{keyword}{override} \textcolor{keywordtype}{string} \mbox{\hyperlink{classJewelCollector_1_1Robot_a3df8858ff2ef16f6166d955dd80cf2f5}{Symbol}} \{ \textcolor{keyword}{get} => \textcolor{stringliteral}{"{}ME"{}}; \}}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00024}\mbox{\hyperlink{classJewelCollector_1_1Robot_ad5b51f5b1d7f1e00ebcb3c3af88c9c91}{00024}}     \textcolor{keyword}{internal} ushort \mbox{\hyperlink{classJewelCollector_1_1Robot_ad5b51f5b1d7f1e00ebcb3c3af88c9c91}{Energy}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \} = 20;}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00025}00025 \textcolor{preprocessor}{    \#endregion Properties}}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00027}00027 \textcolor{preprocessor}{    \#region Constructor}}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00035}\mbox{\hyperlink{classJewelCollector_1_1Robot_a669b0ce3e8b2476287df1cded109c202}{00035}}     \textcolor{keyword}{internal} \mbox{\hyperlink{classJewelCollector_1_1Robot_a669b0ce3e8b2476287df1cded109c202}{Robot}}(ILogger<Robot> logger, \textcolor{keywordtype}{byte} y, \textcolor{keywordtype}{byte} x) : base(y, x)}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00036}00036     \{}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00037}00037         \mbox{\hyperlink{classJewelCollector_1_1Robot_a296a542aadf747f03855eee59122e954}{\_logger}} = logger;}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00038}00038     \}}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00039}00039 \textcolor{preprocessor}{    \#endregion Constructor}}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00041}00041 \textcolor{preprocessor}{    \#region Visible Methods}}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00045}\mbox{\hyperlink{classJewelCollector_1_1Robot_a5e68588a1a8899e6c4cdc2c0ea43df85}{00045}}     \textcolor{keyword}{internal} \textcolor{keywordtype}{void} \mbox{\hyperlink{classJewelCollector_1_1Robot_a5e68588a1a8899e6c4cdc2c0ea43df85}{CollectItem}}(\mbox{\hyperlink{classJewelCollector_1_1Placeable}{Placeable}} item)}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00046}00046     \{}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00047}00047         \textcolor{keywordflow}{if} (item is \mbox{\hyperlink{classJewelCollector_1_1Jewel}{Jewel}} jewel)}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00048}00048         \{}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00049}00049             \textcolor{comment}{// Adicionar na sacola}}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00050}00050             \mbox{\hyperlink{classJewelCollector_1_1Robot_a78269ac9401ab7791733f3a1f6af96b6}{\_bag}}[(int)jewel.Type] += 1;}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00052}00052             \textcolor{comment}{// Usar a joia}}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00053}00053             if (jewel.Type == \mbox{\hyperlink{classJewelCollector_1_1Jewel}{Jewel}}.\mbox{\hyperlink{classJewelCollector_1_1Jewel_acda5be5fe26089f964c9c232fb27e7ef}{Types}}.Blue)}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00054}00054                 \mbox{\hyperlink{classJewelCollector_1_1Robot_ad5b51f5b1d7f1e00ebcb3c3af88c9c91}{Energy}} += 5;}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00055}00055         \}}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00056}00056         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (item is \mbox{\hyperlink{classJewelCollector_1_1Obstacle}{Obstacle}} obstacle \&\& obstacle.\mbox{\hyperlink{classJewelCollector_1_1Obstacle_a09b33a2c0fcda14c0279120b27a832ab}{Type}} == \mbox{\hyperlink{classJewelCollector_1_1Obstacle}{Obstacle}}.\mbox{\hyperlink{classJewelCollector_1_1Obstacle_a5484d1e9c365a953ddb5fa59b75d09e2}{Types}}.Tree)}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00057}00057         \{}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00058}00058             \textcolor{comment}{// Adicionar na sacola}}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00059}00059             \mbox{\hyperlink{classJewelCollector_1_1Robot_ae073825c5fd12bc645dcd690d41571da}{\_collectedTrees}} += 1;}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00061}00061             \textcolor{comment}{// Usar o obstáculo}}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00062}00062             \mbox{\hyperlink{classJewelCollector_1_1Robot_ad5b51f5b1d7f1e00ebcb3c3af88c9c91}{Energy}} += 1;}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00063}00063         \}}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00065}00065         \mbox{\hyperlink{classJewelCollector_1_1LogHelper}{LogHelper}}.\mbox{\hyperlink{classJewelCollector_1_1LogHelper_ab882adec52df7177a90382f8dc6f172c}{QueueLog}}(\mbox{\hyperlink{classJewelCollector_1_1Robot_a296a542aadf747f03855eee59122e954}{\_logger}}, \mbox{\hyperlink{structJewelCollector_1_1LogEntry}{LogEntry}}.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_a2c2b4c14336985c2b5fff2555081427d}{Types}}.Information, \textcolor{stringliteral}{"{}Item collected"{}});}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00066}00066     \}}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00072}\mbox{\hyperlink{classJewelCollector_1_1Robot_a020fc0045f58e83a4a9868709be213c4}{00072}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classJewelCollector_1_1Robot_a020fc0045f58e83a4a9868709be213c4}{Move}}(\mbox{\hyperlink{structJewelCollector_1_1Position}{Position}} newPosition)}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00073}00073     \{}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00074}00074         \mbox{\hyperlink{structJewelCollector_1_1Position}{Position}} = newPosition;}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00075}00075         \mbox{\hyperlink{classJewelCollector_1_1LogHelper}{LogHelper}}.\mbox{\hyperlink{classJewelCollector_1_1LogHelper_ab882adec52df7177a90382f8dc6f172c}{QueueLog}}(\mbox{\hyperlink{classJewelCollector_1_1Robot_a296a542aadf747f03855eee59122e954}{\_logger}}, \mbox{\hyperlink{structJewelCollector_1_1LogEntry}{LogEntry}}.\mbox{\hyperlink{structJewelCollector_1_1LogEntry_a2c2b4c14336985c2b5fff2555081427d}{Types}}.Debug, \$\textcolor{stringliteral}{"{}Moved to \{Position\}"{}});}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00076}00076     \}}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00081}\mbox{\hyperlink{classJewelCollector_1_1Robot_a6f90cd1f1d6341d8a36d0a477f8e5f6b}{00081}}     \textcolor{keyword}{internal} \textcolor{keywordtype}{void} \mbox{\hyperlink{classJewelCollector_1_1Robot_a6f90cd1f1d6341d8a36d0a477f8e5f6b}{PrintBag}}()}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00082}00082     \{}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00083}00083         uint totalItems = 0;}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00084}00084         ushort totalValue = 0;}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00086}00086         \textcolor{keywordflow}{foreach} (\mbox{\hyperlink{classJewelCollector_1_1Jewel}{Jewel}}.\mbox{\hyperlink{classJewelCollector_1_1Jewel_acda5be5fe26089f964c9c232fb27e7ef}{Types}} type in Enum.GetValues(typeof(\mbox{\hyperlink{classJewelCollector_1_1Jewel}{Jewel}}.\mbox{\hyperlink{classJewelCollector_1_1Jewel_acda5be5fe26089f964c9c232fb27e7ef}{Types}})).Cast<\mbox{\hyperlink{classJewelCollector_1_1Jewel}{Jewel}}.\mbox{\hyperlink{classJewelCollector_1_1Jewel_acda5be5fe26089f964c9c232fb27e7ef}{Types}}>())}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00087}00087         \{}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00088}00088             totalItems += \mbox{\hyperlink{classJewelCollector_1_1Robot_a78269ac9401ab7791733f3a1f6af96b6}{\_bag}}[(int)type];}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00089}00089             totalValue += (ushort)(\mbox{\hyperlink{classJewelCollector_1_1Robot_a78269ac9401ab7791733f3a1f6af96b6}{\_bag}}[(\textcolor{keywordtype}{int})type] * \mbox{\hyperlink{classJewelCollector_1_1Jewel}{Jewel}}.\mbox{\hyperlink{classJewelCollector_1_1Jewel_a9700d1d0ae8f9ea6352c22fcb5f1b9b7}{GetValue}}(type));}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00090}00090         \}}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00091}00091         totalItems += \mbox{\hyperlink{classJewelCollector_1_1Robot_ae073825c5fd12bc645dcd690d41571da}{\_collectedTrees}};}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00093}00093         Console.WriteLine(\$\textcolor{stringliteral}{"{}Bag total items: \{totalItems\} | Bag total value: \{totalValue\} | Energy: \{Energy\}"{}});}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00094}00094     \}}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00095}00095 \textcolor{preprocessor}{    \#endregion Visible Methods}}
+\DoxyCodeLine{\Hypertarget{Robot_8cs_source_l00096}00096 \}}
+
+\end{DoxyCode}

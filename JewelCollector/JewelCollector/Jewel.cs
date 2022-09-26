@@ -17,11 +17,10 @@ internal class Jewel : Placeable
     }
     #endregion
 
-    #region Fields
-
-    #endregion Fields
-
     #region Properties
+    /// <summary>
+    /// Símbolo usado para representar a joia no mapa.
+    /// </summary>
     internal override string Symbol
     {
         get => Type switch
@@ -32,7 +31,9 @@ internal class Jewel : Placeable
             _ => "J?"
         };
     }
-
+    /// <summary>
+    /// Tipo da joia.
+    /// </summary>
     internal Types Type { get; }
     #endregion Properties
 
@@ -40,8 +41,10 @@ internal class Jewel : Placeable
     /// <summary>
     /// Construtor padrão da classe.
     /// </summary>
-    /// <param name="position"> Posição no mapa. </param>
-    /// <param name="type"> Tipo de joia. </param>
+    /// <param name="y"> Posição 'y' no mapa. </param>
+    /// <param name="x"> Posição 'x' no mapa. </param>
+    /// <param name="type"> Tipo da joia. </param>
+    /// <returns></returns>
     internal Jewel(byte y, byte x, Types type) : base(y, x)
     {
         Type = type;
@@ -49,6 +52,11 @@ internal class Jewel : Placeable
     #endregion Constructor
 
     #region Visible Methods
+    /// <summary>
+    /// Obtém o valor de uma joia dado seu tipo.
+    /// </summary>
+    /// <param name="type"> Tipo da joia. </param>
+    /// <returns> Valor da joia. </returns>
     internal static byte GetValue(Types type)
     {
         return type switch

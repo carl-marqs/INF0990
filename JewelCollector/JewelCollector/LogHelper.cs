@@ -5,7 +5,7 @@ namespace JewelCollector;
 #pragma warning disable CA2254
 
 /// <summary>
-/// 
+/// Classe que armazena entradas de log numa fila para exibi-las todas de uma vez.
 /// </summary>
 public static class LogHelper
 {
@@ -14,11 +14,21 @@ public static class LogHelper
     #endregion Fields
 
     #region Visible Methods
+    /// <summary>
+    /// Adiciona uma entrada de log na fila.
+    /// </summary>
+    /// <param name="logger"> Objeto responsável por registrar mensagens. </param>
+    /// <param name="logType"> Nível (ou tipo) do log. </param>
+    /// <param name="message"> Mensagem do log. </param>
+    /// <param name="exception"> Exceção associada. </param>
     public static void QueueLog(ILogger logger, LogEntry.Types logType, string message, Exception? exception = null)
     {
         _queue.Enqueue(new LogEntry(logger, logType, message, exception));
     }
 
+    /// <summary>
+    /// Escreve todos os logs pendentes.
+    /// </summary>
     public static void ConsumeLogs()
     {
         while (_queue.Count > 0)

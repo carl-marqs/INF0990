@@ -1,0 +1,41 @@
+\hypertarget{Obstacle_8cs_source}{}\doxysection{Obstacle.\+cs}
+\label{Obstacle_8cs_source}\index{JewelCollector/JewelCollector/Obstacle.cs@{JewelCollector/JewelCollector/Obstacle.cs}}
+\mbox{\hyperlink{Obstacle_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00001}00001 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceJewelCollector}{JewelCollector}};}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00006}\mbox{\hyperlink{classJewelCollector_1_1Obstacle}{00006}} \textcolor{keyword}{internal} \textcolor{keyword}{class }\mbox{\hyperlink{classJewelCollector_1_1Obstacle}{Obstacle}} : \mbox{\hyperlink{classJewelCollector_1_1Placeable}{Placeable}}}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00007}00007 \{}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00008}00008 \textcolor{preprocessor}{    \#region Enums}}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00012}\mbox{\hyperlink{classJewelCollector_1_1Obstacle_a5484d1e9c365a953ddb5fa59b75d09e2}{00012}}     \textcolor{keyword}{internal} \textcolor{keyword}{enum} \mbox{\hyperlink{classJewelCollector_1_1Obstacle_a5484d1e9c365a953ddb5fa59b75d09e2}{Types}}}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00013}00013     \{}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00014}00014         Tree, }
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00015}00015         Water, }
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00016}00016         Radioactive \textcolor{comment}{// Radioativo}}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00017}00017     \}}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00018}00018 \textcolor{preprocessor}{    \#endregion}}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00020}00020 \textcolor{preprocessor}{    \#region Properties}}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00024}\mbox{\hyperlink{classJewelCollector_1_1Obstacle_abe7f78bd025902683d1ec2414bf11961}{00024}}     \textcolor{keyword}{internal} \textcolor{keyword}{override} \textcolor{keywordtype}{string} \mbox{\hyperlink{classJewelCollector_1_1Obstacle_abe7f78bd025902683d1ec2414bf11961}{Symbol}}}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00025}00025     \{}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00026}00026         \textcolor{keyword}{get} => \mbox{\hyperlink{classJewelCollector_1_1Obstacle_a09b33a2c0fcda14c0279120b27a832ab}{Type}} \textcolor{keywordflow}{switch}}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00027}00027         \{}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00028}00028             Types.Tree => \textcolor{stringliteral}{"{}\$\$"{}},}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00029}00029             Types.Water => \textcolor{stringliteral}{"{}\#\#"{}},}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00030}00030             Types.Radioactive => \textcolor{stringliteral}{"{}!!"{}},}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00032}00032             \_ => \textcolor{stringliteral}{"{}??"{}}}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00033}00033         \};}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00034}00034     \}}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00038}\mbox{\hyperlink{classJewelCollector_1_1Obstacle_a09b33a2c0fcda14c0279120b27a832ab}{00038}}     \textcolor{keyword}{internal} \mbox{\hyperlink{classJewelCollector_1_1Obstacle_a5484d1e9c365a953ddb5fa59b75d09e2}{Types}} \mbox{\hyperlink{classJewelCollector_1_1Obstacle_a09b33a2c0fcda14c0279120b27a832ab}{Type}} \{ \textcolor{keyword}{get}; \}}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00039}00039 \textcolor{preprocessor}{    \#endregion Properties}}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00041}00041 \textcolor{preprocessor}{    \#region Constructor}}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00049}\mbox{\hyperlink{classJewelCollector_1_1Obstacle_a402aa1c037c8a69b584cbdfc41695fdb}{00049}}     \textcolor{keyword}{internal} \mbox{\hyperlink{classJewelCollector_1_1Obstacle_a402aa1c037c8a69b584cbdfc41695fdb}{Obstacle}}(\textcolor{keywordtype}{byte} y, \textcolor{keywordtype}{byte} x, \mbox{\hyperlink{classJewelCollector_1_1Obstacle_a5484d1e9c365a953ddb5fa59b75d09e2}{Types}} type) : base(y, x)}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00050}00050     \{}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00051}00051         \mbox{\hyperlink{classJewelCollector_1_1Obstacle_a09b33a2c0fcda14c0279120b27a832ab}{Type}} = type;}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00052}00052     \}}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00053}00053 \textcolor{preprocessor}{    \#endregion Constructor}}
+\DoxyCodeLine{\Hypertarget{Obstacle_8cs_source_l00054}00054 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,203 @@
+\hypertarget{classJewelCollector_1_1Robot}{}\doxysection{Jewel\+Collector.\+Robot}
+\label{classJewelCollector_1_1Robot}\index{JewelCollector.Robot@{JewelCollector.Robot}}
+
+
+Representa o personagem controlado pelo jogador.   
+
+
+Inheritance diagram for Jewel\+Collector.\+Robot\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classJewelCollector_1_1Robot}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classJewelCollector_1_1Robot_a020fc0045f58e83a4a9868709be213c4}{Move}} (\mbox{\hyperlink{structJewelCollector_1_1Position}{Position}} new\+Position)
+\begin{DoxyCompactList}\small\item\em Move-\/se para determinada posição.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Package Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJewelCollector_1_1Robot_a669b0ce3e8b2476287df1cded109c202}{Robot}} (ILogger$<$ \mbox{\hyperlink{classJewelCollector_1_1Robot}{Robot}} $>$ logger, byte y, byte x)
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJewelCollector_1_1Robot_a5e68588a1a8899e6c4cdc2c0ea43df85}{Collect\+Item}} (\mbox{\hyperlink{classJewelCollector_1_1Placeable}{Placeable}} item)
+\begin{DoxyCompactList}\small\item\em Coleta um item, usa seu efeito e adiciona na sacola.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJewelCollector_1_1Robot_a6f90cd1f1d6341d8a36d0a477f8e5f6b}{Print\+Bag}} ()
+\begin{DoxyCompactList}\small\item\em Exibe informações da sacola.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+override string \mbox{\hyperlink{classJewelCollector_1_1Robot_a3df8858ff2ef16f6166d955dd80cf2f5}{Symbol}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Símbolo usado para representar o jogador.  \end{DoxyCompactList}\item 
+ushort \mbox{\hyperlink{classJewelCollector_1_1Robot_ad5b51f5b1d7f1e00ebcb3c3af88c9c91}{Energy}} = 20\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Quantidade de energia que o jogador usa para se mover.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly ILogger$<$ \mbox{\hyperlink{classJewelCollector_1_1Robot}{Robot}} $>$ \mbox{\hyperlink{classJewelCollector_1_1Robot_a296a542aadf747f03855eee59122e954}{\+\_\+logger}}
+\item 
+readonly ushort\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classJewelCollector_1_1Robot_a78269ac9401ab7791733f3a1f6af96b6}{\+\_\+bag}} = new ushort\mbox{[}Enum.\+Get\+Names(typeof(\mbox{\hyperlink{classJewelCollector_1_1Jewel_acda5be5fe26089f964c9c232fb27e7ef}{Jewel.\+Types}})).Length\mbox{]}
+\item 
+ushort \mbox{\hyperlink{classJewelCollector_1_1Robot_ae073825c5fd12bc645dcd690d41571da}{\+\_\+collected\+Trees}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Representa o personagem controlado pelo jogador.  
+
+Definition at line \mbox{\hyperlink{Robot_8cs_source_l00008}{8}} of file \mbox{\hyperlink{Robot_8cs_source}{Robot.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classJewelCollector_1_1Robot_a669b0ce3e8b2476287df1cded109c202}\label{classJewelCollector_1_1Robot_a669b0ce3e8b2476287df1cded109c202}} 
+\index{JewelCollector.Robot@{JewelCollector.Robot}!Robot@{Robot}}
+\index{Robot@{Robot}!JewelCollector.Robot@{JewelCollector.Robot}}
+\doxysubsubsection{\texorpdfstring{Robot()}{Robot()}}
+{\footnotesize\ttfamily Jewel\+Collector.\+Robot.\+Robot (\begin{DoxyParamCaption}\item[{ILogger$<$ \mbox{\hyperlink{classJewelCollector_1_1Robot}{Robot}} $>$}]{logger,  }\item[{byte}]{y,  }\item[{byte}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Construtor padrão da classe.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em logger} & Objeto responsável por registrar mensagens. \\
+\hline
+{\em y} & Posição \textquotesingle{}y\textquotesingle{} no mapa. \\
+\hline
+{\em x} & Posição \textquotesingle{}x\textquotesingle{} no mapa. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Robot_8cs_source_l00035}{35}} of file \mbox{\hyperlink{Robot_8cs_source}{Robot.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classJewelCollector_1_1Robot_a5e68588a1a8899e6c4cdc2c0ea43df85}\label{classJewelCollector_1_1Robot_a5e68588a1a8899e6c4cdc2c0ea43df85}} 
+\index{JewelCollector.Robot@{JewelCollector.Robot}!CollectItem@{CollectItem}}
+\index{CollectItem@{CollectItem}!JewelCollector.Robot@{JewelCollector.Robot}}
+\doxysubsubsection{\texorpdfstring{CollectItem()}{CollectItem()}}
+{\footnotesize\ttfamily void Jewel\+Collector.\+Robot.\+Collect\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classJewelCollector_1_1Placeable}{Placeable}}}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Coleta um item, usa seu efeito e adiciona na sacola.  
+
+
+
+Definition at line \mbox{\hyperlink{Robot_8cs_source_l00045}{45}} of file \mbox{\hyperlink{Robot_8cs_source}{Robot.\+cs}}.
+
+\mbox{\Hypertarget{classJewelCollector_1_1Robot_a020fc0045f58e83a4a9868709be213c4}\label{classJewelCollector_1_1Robot_a020fc0045f58e83a4a9868709be213c4}} 
+\index{JewelCollector.Robot@{JewelCollector.Robot}!Move@{Move}}
+\index{Move@{Move}!JewelCollector.Robot@{JewelCollector.Robot}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily void Jewel\+Collector.\+Robot.\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structJewelCollector_1_1Position}{Position}}}]{new\+Position }\end{DoxyParamCaption})}
+
+
+
+Move-\/se para determinada posição.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interfaceJewelCollector_1_1IMoveable_a9b4427a736babca6da92eae325074ce1}{Jewel\+Collector.\+IMoveable}}.
+
+
+
+Definition at line \mbox{\hyperlink{Robot_8cs_source_l00072}{72}} of file \mbox{\hyperlink{Robot_8cs_source}{Robot.\+cs}}.
+
+\mbox{\Hypertarget{classJewelCollector_1_1Robot_a6f90cd1f1d6341d8a36d0a477f8e5f6b}\label{classJewelCollector_1_1Robot_a6f90cd1f1d6341d8a36d0a477f8e5f6b}} 
+\index{JewelCollector.Robot@{JewelCollector.Robot}!PrintBag@{PrintBag}}
+\index{PrintBag@{PrintBag}!JewelCollector.Robot@{JewelCollector.Robot}}
+\doxysubsubsection{\texorpdfstring{PrintBag()}{PrintBag()}}
+{\footnotesize\ttfamily void Jewel\+Collector.\+Robot.\+Print\+Bag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Exibe informações da sacola.  
+
+
+
+Definition at line \mbox{\hyperlink{Robot_8cs_source_l00081}{81}} of file \mbox{\hyperlink{Robot_8cs_source}{Robot.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classJewelCollector_1_1Robot_a78269ac9401ab7791733f3a1f6af96b6}\label{classJewelCollector_1_1Robot_a78269ac9401ab7791733f3a1f6af96b6}} 
+\index{JewelCollector.Robot@{JewelCollector.Robot}!\_bag@{\_bag}}
+\index{\_bag@{\_bag}!JewelCollector.Robot@{JewelCollector.Robot}}
+\doxysubsubsection{\texorpdfstring{\_bag}{\_bag}}
+{\footnotesize\ttfamily readonly ushort \mbox{[}$\,$\mbox{]} Jewel\+Collector.\+Robot.\+\_\+bag = new ushort\mbox{[}Enum.\+Get\+Names(typeof(\mbox{\hyperlink{classJewelCollector_1_1Jewel_acda5be5fe26089f964c9c232fb27e7ef}{Jewel.\+Types}})).Length\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Robot_8cs_source_l00012}{12}} of file \mbox{\hyperlink{Robot_8cs_source}{Robot.\+cs}}.
+
+\mbox{\Hypertarget{classJewelCollector_1_1Robot_ae073825c5fd12bc645dcd690d41571da}\label{classJewelCollector_1_1Robot_ae073825c5fd12bc645dcd690d41571da}} 
+\index{JewelCollector.Robot@{JewelCollector.Robot}!\_collectedTrees@{\_collectedTrees}}
+\index{\_collectedTrees@{\_collectedTrees}!JewelCollector.Robot@{JewelCollector.Robot}}
+\doxysubsubsection{\texorpdfstring{\_collectedTrees}{\_collectedTrees}}
+{\footnotesize\ttfamily ushort Jewel\+Collector.\+Robot.\+\_\+collected\+Trees = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Robot_8cs_source_l00013}{13}} of file \mbox{\hyperlink{Robot_8cs_source}{Robot.\+cs}}.
+
+\mbox{\Hypertarget{classJewelCollector_1_1Robot_a296a542aadf747f03855eee59122e954}\label{classJewelCollector_1_1Robot_a296a542aadf747f03855eee59122e954}} 
+\index{JewelCollector.Robot@{JewelCollector.Robot}!\_logger@{\_logger}}
+\index{\_logger@{\_logger}!JewelCollector.Robot@{JewelCollector.Robot}}
+\doxysubsubsection{\texorpdfstring{\_logger}{\_logger}}
+{\footnotesize\ttfamily readonly ILogger$<$\mbox{\hyperlink{classJewelCollector_1_1Robot}{Robot}}$>$ Jewel\+Collector.\+Robot.\+\_\+logger\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Robot_8cs_source_l00011}{11}} of file \mbox{\hyperlink{Robot_8cs_source}{Robot.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classJewelCollector_1_1Robot_ad5b51f5b1d7f1e00ebcb3c3af88c9c91}\label{classJewelCollector_1_1Robot_ad5b51f5b1d7f1e00ebcb3c3af88c9c91}} 
+\index{JewelCollector.Robot@{JewelCollector.Robot}!Energy@{Energy}}
+\index{Energy@{Energy}!JewelCollector.Robot@{JewelCollector.Robot}}
+\doxysubsubsection{\texorpdfstring{Energy}{Energy}}
+{\footnotesize\ttfamily ushort Jewel\+Collector.\+Robot.\+Energy = 20\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}, {\ttfamily [package]}}
+
+
+
+Quantidade de energia que o jogador usa para se mover.  
+
+
+
+Definition at line \mbox{\hyperlink{Robot_8cs_source_l00024}{24}} of file \mbox{\hyperlink{Robot_8cs_source}{Robot.\+cs}}.
+
+\mbox{\Hypertarget{classJewelCollector_1_1Robot_a3df8858ff2ef16f6166d955dd80cf2f5}\label{classJewelCollector_1_1Robot_a3df8858ff2ef16f6166d955dd80cf2f5}} 
+\index{JewelCollector.Robot@{JewelCollector.Robot}!Symbol@{Symbol}}
+\index{Symbol@{Symbol}!JewelCollector.Robot@{JewelCollector.Robot}}
+\doxysubsubsection{\texorpdfstring{Symbol}{Symbol}}
+{\footnotesize\ttfamily override string Jewel\+Collector.\+Robot.\+Symbol\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [package]}}
+
+
+
+Símbolo usado para representar o jogador.  
+
+
+
+Definition at line \mbox{\hyperlink{Robot_8cs_source_l00020}{20}} of file \mbox{\hyperlink{Robot_8cs_source}{Robot.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Jewel\+Collector/\+Jewel\+Collector/\mbox{\hyperlink{Robot_8cs}{Robot.\+cs}}\end{DoxyCompactItemize}

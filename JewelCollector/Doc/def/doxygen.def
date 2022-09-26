@@ -1,0 +1,1480 @@
+AutoGen Definitions dummy;
+interface = {
+  cp-id     = 'interfaceJewelCollector_1_1IMoveable';
+  cp-name   = 'JewelCollector::IMoveable';
+  cp-ref     = {
+    ref-type = derived;
+    ref-id   = 'classJewelCollector_1_1Robot';
+    ref-prot = public;
+    ref-virt = non-virtual;
+  };
+  cp-section = {
+    sec-kind = 'public-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'interfaceJewelCollector_1_1IMoveable_1a9b4427a736babca6da92eae325074ce1';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Move';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Position
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'newPosition';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/IMoveable.cs';
+      sec-mem-desc-line = '25';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\iline 21 
+
+</summary>
+<param name="newPosition"></param> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/IMoveable.cs';
+  cp-fileline  = '6';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+<summary>
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+\iline 3 
+
+</summary> 
+_EnD_oF_dEf_TeXt_;
+  cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 1;
+        node-label = 'JewelCollector.IMoveable';
+        node-link = {
+          node-link-id = 'interfaceJewelCollector_1_1IMoveable';
+        };
+      }; /* node */
+      node = {
+        node-id    = 2;
+        node-label = 'JewelCollector.Robot';
+        node-link = {
+          node-link-id = 'classJewelCollector_1_1Robot';
+        };
+        node-child = {
+          child-id = '1';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+}; /* interface */
+class = {
+  cp-id     = 'classJewelCollector_1_1Jewel';
+  cp-name   = 'JewelCollector::Jewel';
+  cp-ref     = {
+    ref-type = base;
+    ref-id   = 'classJewelCollector_1_1Placeable';
+    ref-prot = public;
+    ref-virt = non-virtual;
+  };
+  cp-section = {
+    sec-kind = 'property';
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classJewelCollector_1_1Jewel_1abd073cb6b71d54894990cf40aaa21471';
+      sec-mem-virt = normal;
+      sec-mem-prot = package;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+override string?
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Symbol';
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Jewel.cs';
+      sec-mem-desc-line = '24';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Símbolo usado para representar a joia no mapa.
+</summary>
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classJewelCollector_1_1Jewel_1af0ab034ce7ce305272e9ca0aab42dfe3';
+      sec-mem-virt = normal;
+      sec-mem-prot = package;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+Types
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Type';
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Jewel.cs';
+      sec-mem-desc-line = '37';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Tipo da joia.
+</summary>
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Jewel.cs';
+  cp-fileline  = '6';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+<summary>
+Representa uma joia que pode ser coletada pelo robô.
+</summary>
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 1;
+        node-label = 'JewelCollector.Jewel';
+        node-link = {
+          node-link-id = 'classJewelCollector_1_1Jewel';
+        };
+        node-child = {
+          child-id = '2';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 2;
+        node-label = 'Placeable';
+        node-link = {
+          node-link-id = 'classJewelCollector_1_1Placeable';
+        };
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+  cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 1;
+        node-label = 'JewelCollector.Jewel';
+        node-link = {
+          node-link-id = 'classJewelCollector_1_1Jewel';
+        };
+        node-child = {
+          child-id = '2';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 2;
+        node-label = 'Placeable';
+        node-link = {
+          node-link-id = 'classJewelCollector_1_1Placeable';
+        };
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'classJewelCollector_1_1JewelCollector';
+  cp-name   = 'JewelCollector::JewelCollector';
+  cp-section = {
+    sec-kind = 'public-static-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classJewelCollector_1_1JewelCollector_1a173ee2675f4c7c51f21d08791a62b9c0';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+static void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Main';
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/JewelCollector.cs';
+      sec-mem-desc-line = '51';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Ponto de entrada do programa, responsável pelo loop de execução.
+</summary>
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'private-static-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classJewelCollector_1_1JewelCollector_1a99d903124193f35567603a9b6fef4ee8';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+static
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'JewelCollector';
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/JewelCollector.cs';
+      sec-mem-desc-line = '33';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Construtor estático responsável por criar o logger factory e
+o log da própria classe.
+</summary>
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'private-static-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classJewelCollector_1_1JewelCollector_1ab24a4892c4de2397391b769c3d7c1225';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+static readonly ILogger< JewelCollector >
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 's_logger';
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/JewelCollector.cs';
+      sec-mem-desc-line = '24';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classJewelCollector_1_1JewelCollector_1a724749ba275da8b16483679956f3f224';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+static readonly ILoggerFactory
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 's_loggerFactory';
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/JewelCollector.cs';
+      sec-mem-desc-line = '25';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/JewelCollector.cs';
+  cp-fileline  = '9';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+<summary>
+Responsável por implementar o método Main(), criar o mapa, inserir as joias, obstáculos,
+instanciar o robô e ler os comandos do teclado.
+</summary>
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+struct = {
+  cp-id     = 'structJewelCollector_1_1LogEntry';
+  cp-name   = 'JewelCollector::LogEntry';
+  cp-section = {
+    sec-kind = 'public-type';
+    sec-member = {
+      sec-mem-kind = 'enum';
+      sec-mem-id   = 'structJewelCollector_1_1LogEntry_1a2c2b4c14336985c2b5fff2555081427d';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-name = 'Types';
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/LogEntry.cs';
+      sec-mem-desc-line = '14';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Tipos de log.
+</summary>
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/LogEntry.cs';
+  cp-fileline  = '8';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+<summary>
+Representa uma entrada de log.
+</summary>
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* struct */
+class = {
+  cp-id     = 'classJewelCollector_1_1LogHelper';
+  cp-name   = 'JewelCollector::LogHelper';
+  cp-section = {
+    sec-kind = 'public-static-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classJewelCollector_1_1LogHelper_1ab882adec52df7177a90382f8dc6f172c';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+static void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'QueueLog';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+ILogger
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'logger';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+LogEntry.Types
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'logType';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+string
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'message';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Exception?
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'exception';
+        sec-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+null
+_EnD_oF_dEf_TeXt_;
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/LogHelper.cs';
+      sec-mem-desc-line = '24';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Adiciona uma entrada de log na fila.
+</summary>
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+<param name="logger"> Objeto responsável por registrar mensagens. </param>
+<param name="logType"> Nível (ou tipo) do log. </param>
+<param name="message"> Mensagem do log. </param>
+<param name="exception"> Exceção associada. </param> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classJewelCollector_1_1LogHelper_1a95736eae8998eb21cb830fab8e3b0616';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+static void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'ConsumeLogs';
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/LogHelper.cs';
+      sec-mem-desc-line = '32';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Escreve todos os logs pendentes.
+</summary>
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'private-static-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classJewelCollector_1_1LogHelper_1aa70badb75399fad9e962a999ef78f44b';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+static readonly Queue< LogEntry >
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = '_queue';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= new()
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/LogHelper.cs';
+      sec-mem-desc-line = '13';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/LogHelper.cs';
+  cp-fileline  = '10';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+<summary>
+Classe que armazena entradas de log numa fila para exibi-las todas de uma vez.
+</summary>
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'classJewelCollector_1_1Map';
+  cp-name   = 'JewelCollector::Map';
+  cp-section = {
+    sec-kind = 'private-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classJewelCollector_1_1Map_1a39b34b6436ae2457a3fe1e0a186ea3d9';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+bool
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'IsPositionBlocked';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Position?
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'position';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Map.cs';
+      sec-mem-desc-line = '209';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Verifica se determinada posição está sendo ocupada por outro item intransponível.
+</summary>
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+<param name="position"> Posição a se verificar. </param>
+<returns> True caso esteja bloqueada, False caso contrário. </returns> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classJewelCollector_1_1Map_1ab93e9d7c66eed3ec9917458a99e143f0';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+bool
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'IsAdjacentToRadioactive';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Position?
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'position';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Map.cs';
+      sec-mem-desc-line = '224';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Verifica se há um elemento radioativo em uma posição adjacente
+</summary>
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+<returns> True caso possua, False caso contrário. </returns> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classJewelCollector_1_1Map_1a75a79e5960e17a41608b0faf0be1870e';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+bool
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'IsPositionValid';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Position?
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'position';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Map.cs';
+      sec-mem-desc-line = '246';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Verifica se uma posição está dentro dos limites do mapa.
+</summary>
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+<param name="position"> Posição a se verificar. </param>
+<returns> True caso seja válida, False caso contrário. </returns> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'private-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classJewelCollector_1_1Map_1a377c879f548033635965c1eb6a78a595';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+readonly ILogger< Map >
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = '_logger';
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Map.cs';
+      sec-mem-desc-line = '11';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classJewelCollector_1_1Map_1a741b27c7839cf8337eb460ac525e4550';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+readonly? Placeable[,]
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = '_map';
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Map.cs';
+      sec-mem-desc-line = '12';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'private-static-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classJewelCollector_1_1Map_1a346dec5779baa9301218228894a7f650';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+static Position
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'GetNextPosition';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Position
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'oldPosition';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+IMoveable.MoveDirections
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'direction';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Map.cs';
+      sec-mem-desc-line = '192';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Obtém a próxima posição, dada uma posição inicial e a direção a se mover.
+</summary>
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+<param name="oldPosition"> Posição inicial. </param>
+<param name="direction"> Direção a se mover. </param>
+<returns> Próxima posição, caso a direção seja válida, posição inicial caso contrário. </returns> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Map.cs';
+  cp-fileline  = '8';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+<summary>
+Representa o mapa 2D do jogo.
+</summary>
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 1;
+        node-label = 'JewelCollector.Map';
+        node-link = {
+          node-link-id = 'classJewelCollector_1_1Map';
+        };
+        node-child = {
+          child-id = '2';
+          relation = usage;
+          edgelabel = <<_EnD_oF_dEf_TeXt_
+_map
+_EnD_oF_dEf_TeXt_;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 2;
+        node-label = 'JewelCollector.Placeable';
+        node-link = {
+          node-link-id = 'classJewelCollector_1_1Placeable';
+        };
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'classJewelCollector_1_1Obstacle';
+  cp-name   = 'JewelCollector::Obstacle';
+  cp-ref     = {
+    ref-type = base;
+    ref-id   = 'classJewelCollector_1_1Placeable';
+    ref-prot = public;
+    ref-virt = non-virtual;
+  };
+  cp-section = {
+    sec-kind = 'property';
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classJewelCollector_1_1Obstacle_1abe7f78bd025902683d1ec2414bf11961';
+      sec-mem-virt = normal;
+      sec-mem-prot = package;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+override string??
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Symbol';
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Obstacle.cs';
+      sec-mem-desc-line = '24';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Símbolo usado para representar o obstáculo no mapa.
+</summary>
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classJewelCollector_1_1Obstacle_1a09b33a2c0fcda14c0279120b27a832ab';
+      sec-mem-virt = normal;
+      sec-mem-prot = package;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+Types
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Type';
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Obstacle.cs';
+      sec-mem-desc-line = '38';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Tipo do obstáculo.
+</summary>
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Obstacle.cs';
+  cp-fileline  = '6';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+<summary>
+Representa um obstáculo no mapa.
+</summary>
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 1;
+        node-label = 'JewelCollector.Obstacle';
+        node-link = {
+          node-link-id = 'classJewelCollector_1_1Obstacle';
+        };
+        node-child = {
+          child-id = '2';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 2;
+        node-label = 'Placeable';
+        node-link = {
+          node-link-id = 'classJewelCollector_1_1Placeable';
+        };
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+  cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 1;
+        node-label = 'JewelCollector.Obstacle';
+        node-link = {
+          node-link-id = 'classJewelCollector_1_1Obstacle';
+        };
+        node-child = {
+          child-id = '2';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 2;
+        node-label = 'Placeable';
+        node-link = {
+          node-link-id = 'classJewelCollector_1_1Placeable';
+        };
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'classJewelCollector_1_1Placeable';
+  cp-name   = 'JewelCollector::Placeable';
+  cp-ref     = {
+    ref-type = derived;
+    ref-id   = 'classJewelCollector_1_1Jewel';
+    ref-prot = public;
+    ref-virt = non-virtual;
+  };
+  cp-ref     = {
+    ref-type = derived;
+    ref-id   = 'classJewelCollector_1_1Obstacle';
+    ref-prot = public;
+    ref-virt = non-virtual;
+  };
+  cp-ref     = {
+    ref-type = derived;
+    ref-id   = 'classJewelCollector_1_1Robot';
+    ref-prot = public;
+    ref-virt = non-virtual;
+  };
+  cp-section = {
+    sec-kind = 'property';
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classJewelCollector_1_1Placeable_1ab171f9e3ae24f478628908df5df18cb0';
+      sec-mem-virt = normal;
+      sec-mem-prot = package;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+Position
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Position';
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Placeable.cs';
+      sec-mem-desc-line = '12';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Posição do item no mapa.
+</summary>
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classJewelCollector_1_1Placeable_1a78e83d27014a03493770c1ece890a6ab';
+      sec-mem-virt = normal;
+      sec-mem-prot = package;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+abstract string
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Symbol';
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Placeable.cs';
+      sec-mem-desc-line = '16';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Símbolo usado para representar o item no mapa.
+</summary>
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Placeable.cs';
+  cp-fileline  = '6';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+<summary>
+Representa objetos que podem ser colocados no mapa.
+</summary>
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 1;
+        node-label = 'JewelCollector.Placeable';
+        node-link = {
+          node-link-id = 'classJewelCollector_1_1Placeable';
+        };
+      }; /* node */
+      node = {
+        node-id    = 2;
+        node-label = 'JewelCollector.Jewel';
+        node-link = {
+          node-link-id = 'classJewelCollector_1_1Jewel';
+        };
+        node-child = {
+          child-id = '1';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 3;
+        node-label = 'JewelCollector.Obstacle';
+        node-link = {
+          node-link-id = 'classJewelCollector_1_1Obstacle';
+        };
+        node-child = {
+          child-id = '1';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 4;
+        node-label = 'JewelCollector.Robot';
+        node-link = {
+          node-link-id = 'classJewelCollector_1_1Robot';
+        };
+        node-child = {
+          child-id = '1';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+struct = {
+  cp-id     = 'structJewelCollector_1_1Position';
+  cp-name   = 'JewelCollector::Position';
+  cp-section = {
+    sec-kind = 'public-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'structJewelCollector_1_1Position_1ac33abe471535014a9b68722f58d0c874';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+override string
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'ToString';
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Position.cs';
+      sec-mem-desc-line = '37';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Converte o objeto para string.
+</summary>
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+<returns></returns> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Position.cs';
+  cp-fileline  = '6';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+<summary>
+Representa uma posição no mapa.
+</summary>
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* struct */
+class = {
+  cp-id     = 'classJewelCollector_1_1Robot';
+  cp-name   = 'JewelCollector::Robot';
+  cp-ref     = {
+    ref-type = base;
+    ref-id   = 'classJewelCollector_1_1Placeable';
+    ref-prot = public;
+    ref-virt = non-virtual;
+  };
+  cp-ref     = {
+    ref-type = base;
+    ref-id   = 'interfaceJewelCollector_1_1IMoveable';
+    ref-prot = public;
+    ref-virt = non-virtual;
+  };
+  cp-section = {
+    sec-kind = 'public-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'classJewelCollector_1_1Robot_1a020fc0045f58e83a4a9868709be213c4';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Move';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Position
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'newPosition';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Robot.cs';
+      sec-mem-desc-line = '72';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Move-se para determinada posição.
+</summary>
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+<param name="direction"></param> 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'property';
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classJewelCollector_1_1Robot_1a3df8858ff2ef16f6166d955dd80cf2f5';
+      sec-mem-virt = normal;
+      sec-mem-prot = package;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+override string
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Symbol';
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Robot.cs';
+      sec-mem-desc-line = '20';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Símbolo usado para representar o jogador.
+</summary>
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'property';
+      sec-mem-id   = 'classJewelCollector_1_1Robot_1ad5b51f5b1d7f1e00ebcb3c3af88c9c91';
+      sec-mem-virt = normal;
+      sec-mem-prot = package;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+ushort
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Energy';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= 20
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Robot.cs';
+      sec-mem-desc-line = '24';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+<summary>
+Quantidade de energia que o jogador usa para se mover.
+</summary>
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'private-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classJewelCollector_1_1Robot_1a296a542aadf747f03855eee59122e954';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+readonly ILogger< Robot >
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = '_logger';
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Robot.cs';
+      sec-mem-desc-line = '11';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classJewelCollector_1_1Robot_1a78269ac9401ab7791733f3a1f6af96b6';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+readonly ushort[]
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = '_bag';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= new ushort[Enum.GetNames(typeof(Jewel.Types)).Length]
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Robot.cs';
+      sec-mem-desc-line = '12';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'classJewelCollector_1_1Robot_1ae073825c5fd12bc645dcd690d41571da';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+ushort
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = '_collectedTrees';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= 0
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Robot.cs';
+      sec-mem-desc-line = '13';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Robot.cs';
+  cp-fileline  = '8';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+<summary>
+Representa o personagem controlado pelo jogador.
+</summary>
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 3;
+        node-label = 'IMoveable';
+        node-link = {
+          node-link-id = 'interfaceJewelCollector_1_1IMoveable';
+        };
+      }; /* node */
+      node = {
+        node-id    = 1;
+        node-label = 'JewelCollector.Robot';
+        node-link = {
+          node-link-id = 'classJewelCollector_1_1Robot';
+        };
+        node-child = {
+          child-id = '2';
+          relation = public-inheritance;
+        }; /* node-child */
+        node-child = {
+          child-id = '3';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 2;
+        node-label = 'Placeable';
+        node-link = {
+          node-link-id = 'classJewelCollector_1_1Placeable';
+        };
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+  cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 3;
+        node-label = 'IMoveable';
+        node-link = {
+          node-link-id = 'interfaceJewelCollector_1_1IMoveable';
+        };
+      }; /* node */
+      node = {
+        node-id    = 1;
+        node-label = 'JewelCollector.Robot';
+        node-link = {
+          node-link-id = 'classJewelCollector_1_1Robot';
+        };
+        node-child = {
+          child-id = '2';
+          relation = public-inheritance;
+        }; /* node-child */
+        node-child = {
+          child-id = '3';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 2;
+        node-label = 'Placeable';
+        node-link = {
+          node-link-id = 'classJewelCollector_1_1Placeable';
+        };
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+file = {
+  file-id   = 'IMoveable_8cs';
+  file-name = 'IMoveable.cs';
+  file-full-name  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/IMoveable.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'Jewel_8cs';
+  file-name = 'Jewel.cs';
+  file-full-name  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Jewel.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'JewelCollector_8cs';
+  file-name = 'JewelCollector.cs';
+  file-full-name  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/JewelCollector.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'LogEntry_8cs';
+  file-name = 'LogEntry.cs';
+  file-full-name  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/LogEntry.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'LogHelper_8cs';
+  file-name = 'LogHelper.cs';
+  file-full-name  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/LogHelper.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'Map_8cs';
+  file-name = 'Map.cs';
+  file-full-name  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Map.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'Debug_2net6_80_2_8NETCoreApp_00Version_0av6_80_8AssemblyAttributes_8cs';
+  file-name = '.NETCoreApp,Version=v6.0.AssemblyAttributes.cs';
+  file-full-name  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'Release_2net6_80_2_8NETCoreApp_00Version_0av6_80_8AssemblyAttributes_8cs';
+  file-name = '.NETCoreApp,Version=v6.0.AssemblyAttributes.cs';
+  file-full-name  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/obj/Release/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'Release_2net6_80_2win10-x64_2_8NETCoreApp_00Version_0av6_80_8AssemblyAttributes_8cs';
+  file-name = '.NETCoreApp,Version=v6.0.AssemblyAttributes.cs';
+  file-full-name  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/obj/Release/net6.0/win10-x64/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'Debug_2net6_80_2JewelCollector_8AssemblyInfo_8cs';
+  file-name = 'JewelCollector.AssemblyInfo.cs';
+  file-full-name  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/obj/Debug/net6.0/JewelCollector.AssemblyInfo.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'Release_2net6_80_2JewelCollector_8AssemblyInfo_8cs';
+  file-name = 'JewelCollector.AssemblyInfo.cs';
+  file-full-name  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/obj/Release/net6.0/JewelCollector.AssemblyInfo.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'Release_2net6_80_2win10-x64_2JewelCollector_8AssemblyInfo_8cs';
+  file-name = 'JewelCollector.AssemblyInfo.cs';
+  file-full-name  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/obj/Release/net6.0/win10-x64/JewelCollector.AssemblyInfo.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'Debug_2net6_80_2JewelCollector_8GlobalUsings_8g_8cs';
+  file-name = 'JewelCollector.GlobalUsings.g.cs';
+  file-full-name  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/obj/Debug/net6.0/JewelCollector.GlobalUsings.g.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'Release_2net6_80_2JewelCollector_8GlobalUsings_8g_8cs';
+  file-name = 'JewelCollector.GlobalUsings.g.cs';
+  file-full-name  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/obj/Release/net6.0/JewelCollector.GlobalUsings.g.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'Release_2net6_80_2win10-x64_2JewelCollector_8GlobalUsings_8g_8cs';
+  file-name = 'JewelCollector.GlobalUsings.g.cs';
+  file-full-name  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/obj/Release/net6.0/win10-x64/JewelCollector.GlobalUsings.g.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'Obstacle_8cs';
+  file-name = 'Obstacle.cs';
+  file-full-name  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Obstacle.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'Placeable_8cs';
+  file-name = 'Placeable.cs';
+  file-full-name  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Placeable.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'Position_8cs';
+  file-name = 'Position.cs';
+  file-full-name  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Position.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'Robot_8cs';
+  file-name = 'Robot.cs';
+  file-full-name  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/Robot.cs';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'README_8md';
+  file-name = 'README.md';
+  file-full-name  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/README.md';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+  namespace = {
+    ns-id   = 'namespaceglobal_1_1System';
+    ns-name = 'global::System';
+  ns-filename  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/obj/Debug/net6.0/JewelCollector.GlobalUsings.g.cs';
+  ns-fileline  = '2';
+  ns-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  ns-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  };
+  namespace = {
+    ns-id   = 'namespaceglobal_1_1System_1_1Collections_1_1Generic';
+    ns-name = 'global::System::Collections::Generic';
+  ns-filename  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/obj/Debug/net6.0/JewelCollector.GlobalUsings.g.cs';
+  ns-fileline  = '3';
+  ns-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  ns-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  };
+  namespace = {
+    ns-id   = 'namespaceglobal_1_1System_1_1IO';
+    ns-name = 'global::System::IO';
+  ns-filename  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/obj/Debug/net6.0/JewelCollector.GlobalUsings.g.cs';
+  ns-fileline  = '4';
+  ns-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  ns-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  };
+  namespace = {
+    ns-id   = 'namespaceglobal_1_1System_1_1Linq';
+    ns-name = 'global::System::Linq';
+  ns-filename  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/obj/Debug/net6.0/JewelCollector.GlobalUsings.g.cs';
+  ns-fileline  = '5';
+  ns-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  ns-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  };
+  namespace = {
+    ns-id   = 'namespaceglobal_1_1System_1_1Net_1_1Http';
+    ns-name = 'global::System::Net::Http';
+  ns-filename  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/obj/Debug/net6.0/JewelCollector.GlobalUsings.g.cs';
+  ns-fileline  = '6';
+  ns-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  ns-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  };
+  namespace = {
+    ns-id   = 'namespaceglobal_1_1System_1_1Threading';
+    ns-name = 'global::System::Threading';
+  ns-filename  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/obj/Debug/net6.0/JewelCollector.GlobalUsings.g.cs';
+  ns-fileline  = '7';
+  ns-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  ns-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  };
+  namespace = {
+    ns-id   = 'namespaceglobal_1_1System_1_1Threading_1_1Tasks';
+    ns-name = 'global::System::Threading::Tasks';
+  ns-filename  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/obj/Debug/net6.0/JewelCollector.GlobalUsings.g.cs';
+  ns-fileline  = '8';
+  ns-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  ns-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  };
+  namespace = {
+    ns-id   = 'namespaceJewelCollector';
+    ns-name = 'JewelCollector';
+  ns-filename  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/IMoveable.cs';
+  ns-fileline  = '1';
+  ns-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  ns-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  };
+  namespace = {
+    ns-id   = 'namespaceMicrosoft_1_1Extensions_1_1Logging';
+    ns-name = 'Microsoft::Extensions::Logging';
+  ns-filename  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/JewelCollector.cs';
+  ns-fileline  = '1';
+  ns-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  ns-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  };
+  namespace = {
+    ns-id   = 'namespaceSystem';
+    ns-name = 'System';
+  ns-filename  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs';
+  ns-fileline  = '2';
+  ns-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  ns-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  };
+  namespace = {
+    ns-id   = 'namespaceSystem_1_1Reflection';
+    ns-name = 'System::Reflection';
+  ns-filename  = 'D:/Carlos Marques/Documents/Unicamp/INF0099/INF0990/INF0990/JewelCollector/JewelCollector/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs';
+  ns-fileline  = '3';
+  ns-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  ns-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  };
